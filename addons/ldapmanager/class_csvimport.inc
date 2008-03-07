@@ -102,7 +102,7 @@ class csvimport extends plugin
     $acl = $this->ui->get_permissions($this->config->current['BASE'],"all/all");
     if(!preg_match("/w/",$acl)){
       if(isset($_POST['userfile']) || isset($_POST['sorted']) || isset($_POST['fileup'])){
-	msg_dialog::display(_("Permission error"), _("You've no permission to import CSV files."), ERROR_DIALOG);
+      	msg_dialog::display(_("Permission error"), _("You've no permission to import CSV files."), ERROR_DIALOG);
       }
       return ($smarty->fetch (get_template_path('contentcsv.tpl', TRUE)));
     }

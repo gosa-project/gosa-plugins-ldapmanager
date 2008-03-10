@@ -37,7 +37,7 @@ class ldif extends plugin
         "plDepends"     => array(),
         "plPriority"    => 1,
         "plSection"     => array("addon"),
-        "plCategory"    => array("ldapmanager" => array("objectClass" => "none", "description" => _("Ldap manager addon"))),
+        "plCategory"    => array("ldapmanager" => array("objectClass" => "none", "description" => _("Ldap manager"))),
 
         "plProvidedAcls" => array()
         ));

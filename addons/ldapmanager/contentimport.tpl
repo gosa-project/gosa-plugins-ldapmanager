@@ -42,7 +42,7 @@
 <br>
 
 <div align="right">
-		<input type="submit" value="{t}Back{/t}" name='back'>
+		<input type="submit" value="{msgPool type=backButton}" name='back'>
 </div>
 		
 {/if}

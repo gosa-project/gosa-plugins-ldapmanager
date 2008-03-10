@@ -111,7 +111,7 @@
 {if $sorted == FALSE}
   <input name="sorted" value="{t}Import{/t}" type ="submit">
 {else}
-  <input type=submit name="back{$plug}" value="{t}Back{/t}">
+  <input type=submit name="back{$plug}" value="{msgPool type=backButton}">
 {/if}
 {/if}
 </p>

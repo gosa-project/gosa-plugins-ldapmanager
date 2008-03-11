@@ -209,7 +209,7 @@ class csvimport extends plugin
 
             /* Insert in the LDAP tree */
             if(count($this->usertab->check())) {
-              msgDialog::displayChecks($this->usertab->check());
+              msg_dialog::displayChecks($this->usertab->check());
               $this->csvinfo['sorteddata'][$i]['status']="<b>"._("failed")."</b>";
               $failing = $i+1;
               break;

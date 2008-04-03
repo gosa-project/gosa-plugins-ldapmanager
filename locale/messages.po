@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-03-14 13:40+0100\n"
+"POT-Creation-Date: 2008-04-03 16:08+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,23 +16,64 @@ msgstr ""
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
 
+#: addons/ldapmanager/contentcsv.tpl:2
+msgid ""
+"The CSV import plugin provides methods to generate user accounts from a file "
+"containing Comma Seperated Values. The administrator can decide which "
+"columns should be transfered to which attribute. Note that you must have at "
+"least the UID, GIVENNAME and SURENAME set."
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:10
+msgid "Select CSV file to import"
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:14
+#: addons/ldapmanager/contentimport.tpl:15
+msgid "Browse"
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:19
+msgid "Select template"
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:34
+msgid "All entries have been written to the LDAP database successfully."
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:36
+msgid "Oups. There was an error during the import of your data."
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:39
+msgid "Here is the status report for the import:"
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:80
+msgid "Selected Template"
+msgstr ""
+
+#: addons/ldapmanager/contentcsv.tpl:109 addons/ldapmanager/contentcsv.tpl:112
+#: addons/ldapmanager/contentimport.tpl:50
+msgid "Import"
+msgstr ""
+
 #: addons/ldapmanager/class_import.inc:6
 #: addons/ldapmanager/class_csvimport.inc:6
 msgid "LDIF export"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:7
-#: addons/ldapmanager/class_exportxls.inc:7
-#: addons/ldapmanager/class_ldif.inc:7
 #: addons/ldapmanager/class_csvimport.inc:7
-#: addons/ldapmanager/class_export.inc:7
+#: addons/ldapmanager/class_ldif.inc:7 addons/ldapmanager/class_export.inc:7
+#: addons/ldapmanager/class_exportxls.inc:7
 msgid "This does something"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:52
-#: addons/ldapmanager/class_exportxls.inc:111
 #: addons/ldapmanager/class_csvimport.inc:105
 #: addons/ldapmanager/class_export.inc:96
+#: addons/ldapmanager/class_exportxls.inc:111
 msgid "Permission error"
 msgstr ""
 
@@ -43,7 +84,6 @@ msgstr ""
 #: addons/ldapmanager/class_import.inc:61
 #: addons/ldapmanager/class_import.inc:68
 #: addons/ldapmanager/class_import.inc:76
-#: addons/ldapmanager/class_exportxls.inc:98
 #: addons/ldapmanager/class_csvimport.inc:165
 #: addons/ldapmanager/class_csvimport.inc:285
 #: addons/ldapmanager/class_csvimport.inc:335
@@ -52,6 +92,7 @@ msgstr ""
 #: addons/ldapmanager/class_csvimport.inc:351
 #: addons/ldapmanager/class_csvimport.inc:494
 #: addons/ldapmanager/class_export.inc:84
+#: addons/ldapmanager/class_exportxls.inc:98
 msgid "Error"
 msgstr ""
 
@@ -94,6 +135,51 @@ msgstr ""
 #: addons/ldapmanager/class_import.inc:118
 #, php-format
 msgid "Undefined flag '%s'!"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:105
+msgid "You've no permission to import CSV files."
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:165
+msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:213
+msgid "failed"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:217
+msgid "ok"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:281
+msgid "status"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:285
+#, php-format
+msgid "Cannot insert entry '%s'!"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:323
+msgid "Information"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:323
+msgid "Nothing to import!"
+msgstr ""
+
+#: addons/ldapmanager/class_csvimport.inc:494
+msgid "Cannot find CSV data in the selected file!"
+msgstr ""
+
+#: addons/ldapmanager/main.inc:35 addons/ldapmanager/class_ldif.inc:6
+msgid "LDAP manager"
+msgstr ""
+
+#: addons/ldapmanager/class_ldif.inc:34 addons/ldapmanager/class_ldif.inc:40
+msgid "Ldap manager"
 msgstr ""
 
 #: addons/ldapmanager/contentexport.tpl:3
@@ -146,19 +232,23 @@ msgstr ""
 msgid "Click here to save the LDAP Export "
 msgstr ""
 
-#: addons/ldapmanager/class_exportxls.inc:6
-msgid "XLS import"
+#: addons/ldapmanager/class_export.inc:6
+msgid "CSV import"
 msgstr ""
 
-#: addons/ldapmanager/class_exportxls.inc:98
 #: addons/ldapmanager/class_export.inc:84
+#: addons/ldapmanager/class_exportxls.inc:98
 msgid "Cannot export selected entries!"
 msgstr ""
 
-#: addons/ldapmanager/class_exportxls.inc:111
 #: addons/ldapmanager/class_export.inc:96
+#: addons/ldapmanager/class_exportxls.inc:111
 #, php-format
 msgid "You have no permission to export '%s'!"
+msgstr ""
+
+#: addons/ldapmanager/class_exportxls.inc:6
+msgid "XLS import"
 msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:3
@@ -171,11 +261,6 @@ msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:10
 msgid "Import LDIF File"
-msgstr ""
-
-#: addons/ldapmanager/contentimport.tpl:15
-#: addons/ldapmanager/contentcsv.tpl:14
-msgid "Browse"
 msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:24
@@ -192,15 +277,6 @@ msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:41
 msgid "Import successful"
-msgstr ""
-
-#: addons/ldapmanager/contentimport.tpl:50
-#: addons/ldapmanager/contentcsv.tpl:109 addons/ldapmanager/contentcsv.tpl:112
-msgid "Import"
-msgstr ""
-
-#: addons/ldapmanager/main.inc:35 addons/ldapmanager/class_ldif.inc:6
-msgid "LDAP manager"
 msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:3
@@ -224,81 +300,4 @@ msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:62
 msgid "Click here to save the LDAP Export to a xls file"
-msgstr ""
-
-#: addons/ldapmanager/class_ldif.inc:34 addons/ldapmanager/class_ldif.inc:40
-msgid "Ldap manager"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:105
-msgid "You've no permission to import CSV files."
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:165
-msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:213
-msgid "failed"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:217
-msgid "ok"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:281
-msgid "status"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:285
-#, php-format
-msgid "Cannot insert entry '%s'!"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:323
-msgid "Information"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:323
-msgid "Nothing to import!"
-msgstr ""
-
-#: addons/ldapmanager/class_csvimport.inc:494
-msgid "Cannot find CSV data in the selected file!"
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:2
-msgid ""
-"The CSV import plugin provides methods to generate user accounts from a file "
-"containing Comma Seperated Values. The administrator can decide which "
-"columns should be transfered to which attribute. Note that you must have at "
-"least the UID, GIVENNAME and SURENAME set."
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:10
-msgid "Select CSV file to import"
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:19
-msgid "Select template"
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:34
-msgid "All entries have been written to the LDAP database successfully."
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:36
-msgid "Oups. There was an error during the import of your data."
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:39
-msgid "Here is the status report for the import:"
-msgstr ""
-
-#: addons/ldapmanager/contentcsv.tpl:80
-msgid "Selected Template"
-msgstr ""
-
-#: addons/ldapmanager/class_export.inc:6
-msgid "CSV import"
 msgstr ""

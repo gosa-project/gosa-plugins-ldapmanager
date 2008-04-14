@@ -56,7 +56,7 @@
 <br>
 	<div>
 		<img alt="" border="0" align=middle src="images/filesaveas.png">
-		<a href = "ldapmanager/getldif.php{$para}" title="{t}Click here to save the complete LDAP database to a file{/t} ">{t}Click here to save the LDAP Export {/t}</a>
+		<a href = "plugins/ldapmanager/getldif.php{$para}" title="{t}Click here to save the complete LDAP database to a file{/t} ">{t}Click here to save the LDAP Export {/t}</a>
 
 
 		<br>

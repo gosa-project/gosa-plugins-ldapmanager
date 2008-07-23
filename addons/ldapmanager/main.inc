@@ -32,7 +32,7 @@ if (!$remove_lock){
 	$display.= "<input type=\"hidden\" name=\"ignore\">\n";
 
 	/* Page header*/
-	$display= print_header(get_template_path('images/ldif.png'), _("LDAP manager")).$display;
+	$display= print_header(get_template_path('plugins/ldapmanager/images/ldif.png'), _("LDAP manager")).$display;
 
 	/* Store changes  in session */
 	session::set('ldif',$ldif);

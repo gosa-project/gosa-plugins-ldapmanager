@@ -5,6 +5,7 @@ class ldif extends plugin
   /* Definitions */
   var $plHeadline= "LDAP manager";
   var $plDescription= "This does something";
+  var $plIcon = "plugins/ldapmanager/images/ldif.png";
 
   /* attribute list for save action */
   var $attributes= array();

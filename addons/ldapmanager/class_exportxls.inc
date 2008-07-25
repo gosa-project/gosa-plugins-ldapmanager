@@ -83,12 +83,7 @@ class xlsexport extends plugin
     // Get the LDAP link, to generate the Export
     $ldap = $this->config->get_ldap_link();
 
-    if ($this->config->current['GOVERNMENTMODE'] == 'true'){
-      $smarty->assign ("govmode", "true");
-    } else {
-      $smarty->assign ("govmode", "false");
-    }
-
+    $smarty->assign ("govmode", $this->config->get_cfg_value("governmentmode"));
     $smarty->assign("LDIFError",FALSE);
 
     if(isset($dn))

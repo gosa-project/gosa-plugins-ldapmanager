@@ -300,7 +300,7 @@ function dump_ldap ($mode= 0)
                 _("Phone number").":",_("Postal address").":",_("Initials").":",_("City").":",
                 _("Email address").":",_("Mobile").":",_("Organization").":",_("Organizational unit").":",
                 _("Pager").":",_("Phone number").":",_("Postal address").":",_("Postal Code").":",
-                _("Surename").":",_("State").":",_("Title").":");
+                _("Surname").":",_("State").":",_("Title").":");
 
     //name of the xls file
     $name_section=_("Full");

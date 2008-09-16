@@ -69,8 +69,8 @@ class ldifexport extends plugin
     // Get the LDAP link, to generate the Export
     $ldap = $this->config->get_ldap_link();
 
-    if ($this->config->get_cfg_value('governmentmode') == 'true'){
-      $smarty->assign ("govmode", $this->config->get_cfg_value("governmentmode"));
+    if ($this->config->get_cfg_value('honourIvbbAttributes') == 'true'){
+      $smarty->assign ("govmode", $this->config->get_cfg_value("honourIvbbAttributes"));
       $smarty->assign("LDIFError",FALSE);
     }
 

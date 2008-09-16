@@ -77,7 +77,7 @@ class xlsexport extends plugin
     $smarty->assign("choicelist",array( get_people_ou()             =>"users" ,
                                         get_groups_ou()             =>"groups" ,
                                         get_ou('systemsou')         =>"computers",
-                                        get_ou('serverou')          =>"servers",
+                                        get_ou('serverRDN')          =>"servers",
                                         "dc=addressbook,"           =>"addressbook"));
 
     // Get the LDAP link, to generate the Export

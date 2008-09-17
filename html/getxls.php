@@ -152,7 +152,7 @@ function dump_ldap ($mode= 0)
      /* SYSTEMS 
         Get all systems from th $dn
         and put them into the xls work sheet */
-     case get_ou('systemsou'): 
+     case get_ou('systemRDN'): 
 
        $name_section=_("Servers");
        $computers= $ldap->gen_xls($dn,"(&(objectClass=*)(cn=*))",array("cn","description","uid"));

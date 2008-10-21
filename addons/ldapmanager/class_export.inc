@@ -32,6 +32,9 @@ class ldifexport extends plugin
     /* Set government mode */
     $smarty= get_smarty();
 
+    $smarty->assign ("govmode", $this->config->get_cfg_value("honourIvbbAttributes"));
+    $smarty->assign("LDIFError",FALSE);
+
     $smarty->assign("type",FALSE);
     $smarty->assign("depselectivbb","");
 

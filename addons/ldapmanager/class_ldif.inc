@@ -33,7 +33,7 @@ class ldif extends plugin
   {
     return (array(
         "plShortName"   => _("Ldap manager"),
-        "plDescription" => _("Ldap manger")."&nbsp;("._("import")."/"._("export").")",
+        "plDescription" => _("Ldap manager")."&nbsp;("._("import")."/"._("export").")",
         "plSelfModify"  => FALSE,
         "plDepends"     => array(),
         "plPriority"    => 1,

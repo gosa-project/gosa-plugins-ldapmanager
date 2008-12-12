@@ -33,9 +33,8 @@ if ( $cleanup ){
   session::un_set('ldif');
 }else{
 
-
 	/* Create phonelist object on demand */
-	if (!session::is_set('ldif') || (isset($_GET['reset']) && $_GET['reset'] == 1)){
+	if (!session::is_set('ldif')){
 		$ldif= new ldif ($config);
 		$ldif->set_acl_category("logview");
 		session::set('ldif',$ldif);

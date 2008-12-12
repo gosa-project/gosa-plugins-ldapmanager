@@ -19,13 +19,21 @@
 */
 
 
-/* Remove classes and variables from session
- */
-if ( $cleanup ){
-  session::un_set('ldif');
+/* Remove locks created by this plugin
+*/
+if ($remove_lock){
+  if(session::is_set('ldif')){
+    // Nothing to unlock here
+  }
 }
 
-if (!$remove_lock){
+/* Remove this plugin from session
+*/
+if ( $cleanup ){
+  session::un_set('ldif');
+}else{
+
+
 	/* Create phonelist object on demand */
 	if (!session::is_set('ldif') || (isset($_GET['reset']) && $_GET['reset'] == 1)){
 		$ldif= new ldif ($config);

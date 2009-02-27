@@ -4,7 +4,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2008-12-19 08:32+0100\n"
+"POT-Creation-Date: 2009-02-27 10:06+0100\n"
 "PO-Revision-Date: 2008-12-21 12:02+0100\n"
 "Last-Translator: Benoit Mortier <benoit.mortier@opensides.be>\n"
 "Language-Team: french <fr@li.org>\n"
@@ -337,7 +337,8 @@ msgstr "Modifier les objets existants, laisse les attributs non modifiés"
 
 #: addons/ldapmanager/contentimport.tpl:25
 msgid "Overwrite existing objects, all not listed attributes will be removed"
-msgstr "Récrire les objets existants, tout les attributs non listés seront enlevés"
+msgstr ""
+"Récrire les objets existants, tout les attributs non listés seront enlevés"
 
 #: addons/ldapmanager/contentimport.tpl:34
 msgid "Remove existing entries first"
@@ -403,11 +404,13 @@ msgstr "Exportation réussie"
 
 #: addons/ldapmanager/contentexportxls.tpl:62
 msgid "Click here to save the complete LDAP database to a xls file"
-msgstr "Cliquez ici pour sauvegarder l'annuaire LDAP  au complet dans un fichier xls"
+msgstr ""
+"Cliquez ici pour sauvegarder l'annuaire LDAP  au complet dans un fichier xls"
 
 #: addons/ldapmanager/contentexportxls.tpl:62
 msgid "Click here to save the LDAP Export to a xls file"
-msgstr "Cliquez ici pour sauver l'exportation de l'annaire LDAP comme un fichier xls"
+msgstr ""
+"Cliquez ici pour sauver l'exportation de l'annaire LDAP comme un fichier xls"
 
 #: addons/ldapmanager/class_ldif.inc:6 addons/ldapmanager/main.inc:49
 msgid "LDAP manager"
@@ -502,11 +505,13 @@ msgstr "Modèle sélectionné"
 
 #: addons/ldapmanager/class_csvimport.inc:105
 msgid "You've no permission to import CSV files."
-msgstr "Vous n'avez pas les droits nécessaires pour effectuer des importations CSV."
+msgstr ""
+"Vous n'avez pas les droits nécessaires pour effectuer des importations CSV."
 
 #: addons/ldapmanager/class_csvimport.inc:165
 msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
-msgstr "J'ai besoin d'un 'sn','givenName' et 'uid' pour créer des utilisateurs."
+msgstr ""
+"J'ai besoin d'un 'sn','givenName' et 'uid' pour créer des utilisateurs."
 
 #: addons/ldapmanager/class_csvimport.inc:213
 msgid "failed"
@@ -540,4 +545,3 @@ msgstr "Impossible de trouver des données CSV dans le fichier selectionné !"
 #: addons/ldapmanager/class_export.inc:6
 msgid "CSV import"
 msgstr "Importation CSV"
-

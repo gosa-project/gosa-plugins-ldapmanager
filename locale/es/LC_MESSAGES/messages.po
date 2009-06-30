@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: admin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-27 10:06+0100\n"
+"POT-Creation-Date: 2009-06-30 09:58+0200\n"
 "PO-Revision-Date: 2007-07-24 00:26+0200\n"
 "Last-Translator: ALEJANDRO ESCANERO BLANCO\n"
 "Language-Team:  <es@li.org>\n"
@@ -203,8 +203,9 @@ msgid "Adressbook of %s on %s"
 msgstr "Libreta direcciones"
 
 #: html/getxls.php:246
+#, fuzzy
 msgid "Common Name"
-msgstr ""
+msgstr "grupos de teléfonos"
 
 #: html/getxls.php:283
 #, fuzzy
@@ -239,8 +240,9 @@ msgid "Postal Code"
 msgstr "Código Postal"
 
 #: html/getxls.php:303
+#, fuzzy
 msgid "Title"
-msgstr ""
+msgstr "Archivo"
 
 #: html/getxls.php:306
 msgid "Full"
@@ -265,8 +267,9 @@ msgstr ""
 #: addons/ldapmanager/class_exportxls.inc:7
 #: addons/ldapmanager/class_csvimport.inc:7
 #: addons/ldapmanager/class_export.inc:7
+#, fuzzy
 msgid "This does something"
-msgstr ""
+msgstr "Mostrar objetos que coincidan"
 
 #: addons/ldapmanager/class_import.inc:52
 msgid "You need full write access to the LDAP tree to import data!"
@@ -345,8 +348,9 @@ msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:15
 #: addons/ldapmanager/contentcsv.tpl:14
+#, fuzzy
 msgid "Browse"
-msgstr ""
+msgstr "Base"
 
 #: addons/ldapmanager/contentimport.tpl:24
 msgid "Modify existing objects, keep untouched attributes"
@@ -402,8 +406,9 @@ msgstr ""
 #: addons/ldapmanager/contentexportxls.tpl:42
 #: addons/ldapmanager/contentexport.tpl:24
 #: addons/ldapmanager/contentexport.tpl:39
+#, fuzzy
 msgid "Choose the department you want to Export"
-msgstr ""
+msgstr "Escoja el departamento base de la búsqueda"
 
 #: addons/ldapmanager/contentexportxls.tpl:39
 #: addons/ldapmanager/contentexport.tpl:36
@@ -424,21 +429,24 @@ msgid "Click here to save the LDAP Export to a xls file"
 msgstr ""
 
 #: addons/ldapmanager/class_ldif.inc:6 addons/ldapmanager/main.inc:49
+#, fuzzy
 msgid "LDAP manager"
-msgstr ""
+msgstr "Aviso LDAP"
 
 #: addons/ldapmanager/class_ldif.inc:35 addons/ldapmanager/class_ldif.inc:36
 #: addons/ldapmanager/class_ldif.inc:41
+#, fuzzy
 msgid "Ldap manager"
-msgstr ""
+msgstr "Administración de ACL"
 
 #: addons/ldapmanager/class_ldif.inc:36
 msgid "import"
 msgstr ""
 
 #: addons/ldapmanager/class_ldif.inc:36
+#, fuzzy
 msgid "export"
-msgstr ""
+msgstr "expiró"
 
 #: addons/ldapmanager/contentexport.tpl:3
 msgid ""
@@ -456,8 +464,9 @@ msgid "Click here to save the complete LDAP database to a file"
 msgstr ""
 
 #: addons/ldapmanager/contentexport.tpl:59
+#, fuzzy
 msgid "Click here to save the LDAP Export "
-msgstr ""
+msgstr "Pulse aquí para cambiar su contraseña"
 
 #: addons/ldapmanager/class_exportxls.inc:6
 msgid "XLS import"
@@ -488,8 +497,9 @@ msgid "Select CSV file to import"
 msgstr ""
 
 #: addons/ldapmanager/contentcsv.tpl:19
+#, fuzzy
 msgid "Select template"
-msgstr ""
+msgstr "Aplicar plantilla"
 
 #: addons/ldapmanager/contentcsv.tpl:34
 msgid "All entries have been written to the LDAP database successfully."
@@ -504,8 +514,9 @@ msgid "Here is the status report for the import:"
 msgstr ""
 
 #: addons/ldapmanager/contentcsv.tpl:80
+#, fuzzy
 msgid "Selected Template"
-msgstr ""
+msgstr "Plantilla"
 
 #: addons/ldapmanager/class_csvimport.inc:105
 #, fuzzy
@@ -517,16 +528,18 @@ msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:213
+#, fuzzy
 msgid "failed"
-msgstr ""
+msgstr "Error"
 
 #: addons/ldapmanager/class_csvimport.inc:217
 msgid "ok"
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:281
+#, fuzzy
 msgid "status"
-msgstr ""
+msgstr "Estado"
 
 #: addons/ldapmanager/class_csvimport.inc:285
 #, fuzzy, php-format

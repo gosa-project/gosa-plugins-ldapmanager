@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: polski\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-27 10:06+0100\n"
+"POT-Creation-Date: 2009-06-30 09:58+0200\n"
 "PO-Revision-Date: 2007-07-14 21:45+0100\n"
 "Last-Translator: Piotr Rybicki <meritus@innervision.pl>\n"
 "Language-Team: Piotr Rybicki <meritus@innervision.pl>\n"
@@ -542,8 +542,9 @@ msgid "Nothing to import!"
 msgstr "Nic do importowania!"
 
 #: addons/ldapmanager/class_csvimport.inc:494
+#, fuzzy
 msgid "Cannot find CSV data in the selected file!"
-msgstr ""
+msgstr "Nie można stworzyć pliku '%s'."
 
 #: addons/ldapmanager/class_export.inc:6
 msgid "CSV import"

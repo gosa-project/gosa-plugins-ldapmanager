@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-27 10:06+0100\n"
+"POT-Creation-Date: 2009-06-30 09:58+0200\n"
 "PO-Revision-Date: 2005-11-18 15:26+0100\n"
 "Last-Translator: Alessandro Amici <a.amici@bopen.it>\n"
 "Language-Team: Italian\n"
@@ -330,8 +330,9 @@ msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:15
 #: addons/ldapmanager/contentcsv.tpl:14
+#, fuzzy
 msgid "Browse"
-msgstr ""
+msgstr "Base"
 
 #: addons/ldapmanager/contentimport.tpl:24
 msgid "Modify existing objects, keep untouched attributes"
@@ -388,8 +389,9 @@ msgstr ""
 #: addons/ldapmanager/contentexportxls.tpl:42
 #: addons/ldapmanager/contentexport.tpl:24
 #: addons/ldapmanager/contentexport.tpl:39
+#, fuzzy
 msgid "Choose the department you want to Export"
-msgstr ""
+msgstr "Scegli il dipartimento di base per la ricerca"
 
 #: addons/ldapmanager/contentexportxls.tpl:39
 #: addons/ldapmanager/contentexport.tpl:36
@@ -445,8 +447,9 @@ msgid "Click here to save the complete LDAP database to a file"
 msgstr ""
 
 #: addons/ldapmanager/contentexport.tpl:59
+#, fuzzy
 msgid "Click here to save the LDAP Export "
-msgstr ""
+msgstr "Non hai il permesso di cambiare la tua password."
 
 #: addons/ldapmanager/class_exportxls.inc:6
 #, fuzzy
@@ -478,8 +481,9 @@ msgid "Select CSV file to import"
 msgstr ""
 
 #: addons/ldapmanager/contentcsv.tpl:19
+#, fuzzy
 msgid "Select template"
-msgstr ""
+msgstr "Template"
 
 #: addons/ldapmanager/contentcsv.tpl:34
 msgid "All entries have been written to the LDAP database successfully."
@@ -494,8 +498,9 @@ msgid "Here is the status report for the import:"
 msgstr ""
 
 #: addons/ldapmanager/contentcsv.tpl:80
+#, fuzzy
 msgid "Selected Template"
-msgstr ""
+msgstr "Template"
 
 #: addons/ldapmanager/class_csvimport.inc:105
 #, fuzzy
@@ -507,16 +512,18 @@ msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:213
+#, fuzzy
 msgid "failed"
-msgstr ""
+msgstr "Fallito"
 
 #: addons/ldapmanager/class_csvimport.inc:217
 msgid "ok"
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:281
+#, fuzzy
 msgid "status"
-msgstr ""
+msgstr "Stato"
 
 #: addons/ldapmanager/class_csvimport.inc:285
 #, fuzzy, php-format
@@ -532,8 +539,9 @@ msgid "Nothing to import!"
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:494
+#, fuzzy
 msgid "Cannot find CSV data in the selected file!"
-msgstr ""
+msgstr "Rimuovi"
 
 #: addons/ldapmanager/class_export.inc:6
 msgid "CSV import"

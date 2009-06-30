@@ -5,7 +5,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-02-27 10:06+0100\n"
+"POT-Creation-Date: 2009-06-30 09:58+0200\n"
 "PO-Revision-Date: 2005-04-18 14:35+0300\n"
 "Last-Translator: Igor Muratov <migor@altlinux.org>\n"
 "Language-Team: ALT Linux Team\n"
@@ -567,8 +567,9 @@ msgid "Nothing to import!"
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:494
+#, fuzzy
 msgid "Cannot find CSV data in the selected file!"
-msgstr ""
+msgstr "Удалить"
 
 #: addons/ldapmanager/class_export.inc:6
 #, fuzzy

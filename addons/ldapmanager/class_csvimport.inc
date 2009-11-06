@@ -86,7 +86,7 @@ class csvimport extends plugin
 
       while($temp = $ldap->fetch($this->csvinfo['templates'])){
         $tempvar ++;
-        $this->csvinfo['arrtemplates'][$tempvar] = $temp['sn'][0]." - ".$this->config->idepartments[preg_replace("/^[^,]+,".get_people_ou()."/i", "", $temp['dn'])];
+        $this->csvinfo['arrtemplates'][$tempvar] = $temp['sn'][0]." - ".$this->config->idepartments[preg_replace("/^[^,]+,".preg_quote(get_people_ou(), '/')."/i", "", $temp['dn'])];
         $this->csvinfo['arrtempls']   [$tempvar]['name'] = $temp['sn'][0]; 
         $this->csvinfo['arrtempls']   [$tempvar]['dn']   = $temp['dn'];
       }

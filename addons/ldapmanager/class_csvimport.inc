@@ -362,7 +362,7 @@ class csvimport extends plugin
             $str .= fread($handle,1024);
           }
 
-          $lines = split("\n",$str);
+          $lines = preg_split("/\n/",$str);
           $anz  = 0;
           $rest = 0;
           $data = array();
@@ -376,7 +376,7 @@ class csvimport extends plugin
               }
 
               $line= str_replace ("\t","",$line);
-              $cells  = split(",",$line )  ;
+              $cells  = explode(",",$line )  ;
 
               if(count($cells)> $anz ){
                 $anz = count($cells);
@@ -401,7 +401,7 @@ class csvimport extends plugin
                 $line= str_replace ("\t"  ,"" ,$line);
 
                 /* get all elements  */
-                $cells  = split(",",$line )  ;
+                $cells  = explode(",",$line )  ;
 
                 /* attach all elements to data array */
                 if(is_array($cells))

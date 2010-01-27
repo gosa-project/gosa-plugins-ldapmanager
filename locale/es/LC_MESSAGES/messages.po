@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: admin\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2009-06-30 09:58+0200\n"
+"POT-Creation-Date: 2010-01-27 15:13+0100\n"
 "PO-Revision-Date: 2010-01-25 01:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: Spanish <>\n"
@@ -78,7 +78,8 @@ msgstr "Miembros"
 msgid "Groups"
 msgstr "Grupos"
 
-#: html/getxls.php:133 html/getxls.php:362, php-format
+#: html/getxls.php:133 html/getxls.php:362
+#, php-format
 msgid "Groups of %s on %s"
 msgstr "Grupos de %s en %s"
 
@@ -182,7 +183,8 @@ msgstr "!Función"
 msgid "Adressbook"
 msgstr "Libreta de direcciones"
 
-#: html/getxls.php:240 html/getxls.php:416, php-format
+#: html/getxls.php:240 html/getxls.php:416
+#, php-format
 msgid "Adressbook of %s on %s"
 msgstr "Libreta de direcciones de %s en %s"
 
@@ -272,7 +274,8 @@ msgstr "Error"
 #: addons/ldapmanager/class_csvimport.inc:335
 #: addons/ldapmanager/class_csvimport.inc:340
 #: addons/ldapmanager/class_csvimport.inc:346
-#: addons/ldapmanager/class_csvimport.inc:351, php-format
+#: addons/ldapmanager/class_csvimport.inc:351
+#, php-format
 msgid "Cannot read uploaded file: %s"
 msgstr "No puedo leer el archivo: %s"
 
@@ -457,7 +460,8 @@ msgid "Cannot export selected entries!"
 msgstr "¡No se puede exportar las entradas seleccionadas!"
 
 #: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_export.inc:96, php-format
+#: addons/ldapmanager/class_export.inc:96
+#, php-format
 msgid "You have no permission to export '%s'!"
 msgstr "¡No tiene permisos para exportar '%s'!"
 
@@ -518,7 +522,8 @@ msgstr "ok"
 msgid "status"
 msgstr "estado"
 
-#: addons/ldapmanager/class_csvimport.inc:285, php-format
+#: addons/ldapmanager/class_csvimport.inc:285
+#, php-format
 msgid "Cannot insert entry '%s'!"
 msgstr "¡No se puede introducir la entrada '%s'!"
 

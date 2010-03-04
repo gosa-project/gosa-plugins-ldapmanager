@@ -2,7 +2,7 @@
 <p style="margin-top:5px;">
   {t}The XLS export plugin provides methods to download a complete snapshot of the running LDAP directory as xls. You may save these files for documentation.{/t}
 </p>
-<p class="seperator">&nbsp;</p>
+<hr>
 
 <table summary="" style="width:100%;">
 <tr>

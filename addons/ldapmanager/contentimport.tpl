@@ -3,7 +3,7 @@
   {t}The LDIF import plugin provides methods to upload a set of entries to your running LDAP directory as ldif. You may use this to add new or modify existing entries. Remember that GOsa will not check your ldifs for GOsa conformance.{/t}
 </p>
 
-<p class="seperator">&nbsp;</p>
+<hr>
 <table summary="" width="100%">
 <tr>
     <td width="180">

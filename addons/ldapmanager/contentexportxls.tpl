@@ -69,8 +69,7 @@
 		<input type="submit" value="{msgPool type=backButton}" name='back'>
 	</div>
 {/if}
-<p class="plugbottom">
-  &nbsp;
-</p>
+
+<hr>
 
 <input type="hidden" name="ignore">

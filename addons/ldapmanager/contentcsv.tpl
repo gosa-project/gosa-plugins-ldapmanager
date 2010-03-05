@@ -104,15 +104,17 @@
 
 <!-- {html_table loop=$data cols=$anz table_attr='border="1"'}-->
 {/if}
-<p class="plugbottom">
-{if $fileup != TRUE}
-  <input type="submit" value="{t}Import{/t}" name="fileup" >
-{else}
-{if $sorted == FALSE}
-  <input name="sorted" value="{t}Import{/t}" type ="submit">
-{else}
-  <input type=submit name="back{$plug}" value="{msgPool type=backButton}">
-{/if}
-{/if}
-</p>
+
+<hr>
+<div class="plugin-actions">
+  {if $fileup != TRUE}
+    <input type="submit" value="{t}Import{/t}" name="fileup" >
+  {else}
+    {if $sorted == FALSE}
+      <input name="sorted" value="{t}Import{/t}" type ="submit">
+    {else}
+      <input type=submit name="back{$plug}" value="{msgPool type=backButton}">
+    {/if}
+  {/if}
+</div>
 <input type="hidden" name="ignore">

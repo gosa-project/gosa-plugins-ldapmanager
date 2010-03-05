@@ -46,7 +46,10 @@
 </div>
 		
 {/if}
-<p class="plugbottom">
-<input type="submit" value="{t}Import{/t}" name="fileup" >
-</p>
+
+<hr>
+<div class="plugin-actions">
+  <input type="submit" value="{t}Import{/t}" name="fileup" >
+</div>
+
 <input type="hidden" name="ignore">

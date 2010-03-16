@@ -108,12 +108,14 @@
 <hr>
 <div class="plugin-actions">
   {if $fileup != TRUE}
-    <input type="submit" value="{t}Import{/t}" name="fileup" >
+    <button type='submit' name='fileup'>{t}Import{/t}</button>
+
   {else}
     {if $sorted == FALSE}
       <input name="sorted" value="{t}Import{/t}" type ="submit">
     {else}
-      <input type=submit name="back{$plug}" value="{msgPool type=backButton}">
+      <button type='submit' name='back{$plug}'>{msgPool type=backButton}</button>
+
     {/if}
   {/if}
 </div>

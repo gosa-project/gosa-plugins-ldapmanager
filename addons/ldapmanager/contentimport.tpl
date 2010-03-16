@@ -42,14 +42,16 @@
 <br>
 
 <div align="right">
-		<input type="submit" value="{msgPool type=backButton}" name='back'>
+		<button type='submit' name='back'>{msgPool type=backButton}</button>
+
 </div>
 		
 {/if}
 
 <hr>
 <div class="plugin-actions">
-  <input type="submit" value="{t}Import{/t}" name="fileup" >
+  <button type='submit' name='fileup'>{t}Import{/t}</button>
+
 </div>
 
 <input type="hidden" name="ignore">

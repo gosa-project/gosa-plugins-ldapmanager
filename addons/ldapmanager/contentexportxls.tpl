@@ -16,7 +16,8 @@
 		</select>
 	</td>
 	<td>
-		<input type="submit" value="{t}Export{/t}" name="sfrmgetsingle">
+		<button type='submit' name='sfrmgetsingle'>{t}Export{/t}</button>
+
 	</td>
 </tr>
 <tr>
@@ -29,7 +30,8 @@
 		</select>
 	</td>
 	<td>
-		<input type="submit" value="{t}Export{/t}" name="sfrmgetfull">
+		<button type='submit' name='sfrmgetfull'>{t}Export{/t}</button>
+
 	</td>
 </tr>
 	
@@ -44,7 +46,8 @@
 		</select>
 	</td>
 	<td>
-		<input type="submit" value="{t}Export{/t}" name="sfrmgetivbb">
+		<button type='submit' name='sfrmgetivbb'>{t}Export{/t}</button>
+
 	</td>
 </tr>
 {/if}
@@ -66,7 +69,8 @@
 		<br>
 	</div>
 	<div align="right">
-		<input type="submit" value="{msgPool type=backButton}" name='back'>
+		<button type='submit' name='back'>{msgPool type=backButton}</button>
+
 	</div>
 {/if}
 

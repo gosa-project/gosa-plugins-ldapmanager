@@ -61,7 +61,8 @@
 	<h1>{t}Export successful{/t}</h1>
 <br>
 	<div>
-		<img alt="" border="0" align=middle src="images/filesaveas.png">
+		{image path="images/filesaveas.png"}
+
 		<a href = "plugins/ldapmanager/getxls.php{$para}" title="{t}Click here to save the complete LDAP database to a xls file{/t} ">{t}Click here to save the LDAP Export to a xls file{/t}</a>
 
 

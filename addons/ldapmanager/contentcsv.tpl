@@ -4,7 +4,7 @@
 <hr>
 
 {if $fileup != TRUE}
-<table summary="">
+<table summary="{t}CSV export{/t}">
 	<tr>
 		<td>
 			<LABEL for="userfile">{t}Select CSV file to import{/t}</LABEL>
@@ -41,7 +41,7 @@
 <br>
 
 
-	<table summary="" cellspacing="1" border=0 cellpadding="4"  bgcolor="#FEFEFE">
+	<table summary="{t}Status report{/t}" cellspacing="1" border=0 cellpadding="4"  bgcolor="#FEFEFE">
 		<tr>
 			{foreach from=$head item=h}
 			<td bgcolor="#BBBBBB">
@@ -80,7 +80,7 @@
 <br><b>{t}Selected Template{/t}:</b> {$tpl}
 <br>
 <br>
-	<table summary="" cellspacing="1" border=0 cellpadding="4" bgcolor="#FEFEFE">
+	<table summary="{t}Template selection{/t}" cellspacing="1" border=0 cellpadding="4" bgcolor="#FEFEFE">
 		<tr>
 			{foreach from=$data[0] item=item key=key}
 			<td bgcolor="#BBBBBB">

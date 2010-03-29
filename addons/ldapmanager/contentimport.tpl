@@ -1,3 +1,10 @@
+<font color='red'>Temporary disabled</font>
+<!--
+
+
+
+
+
 {if $type == FALSE || $LDIFError != FALSE}
 <p style="margin-top:5px;">
   {t}The LDIF import plugin provides methods to upload a set of entries to your running LDAP directory as ldif. You may use this to add new or modify existing entries. Remember that GOsa will not check your ldifs for GOsa conformance.{/t}
@@ -20,7 +27,7 @@
 		&nbsp;
 	</td>
 	<td>
-<!--        <input type="checkbox" name="overwrite" value="1" id="overwrite">-->
+    <input type="checkbox" name="overwrite" value="1" id="overwrite"> - - >
 		<input type="radio" name="overwrite" value="1" checked>{t}Modify existing objects, keep untouched attributes{/t}<br>
 		<input type="radio" name="overwrite" value="0">{t}Overwrite existing objects, all not listed attributes will be removed{/t}
 	</td>
@@ -55,3 +62,4 @@
 </div>
 
 <input type="hidden" name="ignore">
+-->

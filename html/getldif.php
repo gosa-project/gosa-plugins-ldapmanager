@@ -77,7 +77,7 @@ $config= session::get('config');
 
 /* Check ACL's */
 $dn =  base64_decode($_GET['dn']);
-$acl = $ui->get_permissions($dn,"ldapmanager/ldifexport");
+$acl = $ui->get_permissions($dn,"ldapmanager/ldif");
 if(!preg_match("/r/",$acl)){
 	msg_dialog::display(_("Permission error"),_("You have no permission to create LDAP dumps!"),FATAL_ERROR_DIALOG);
 	exit();

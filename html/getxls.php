@@ -480,15 +480,17 @@ if (!session::is_set('ui')){
 $ui     = session::get('ui');
 $config = session::get('config');
 
-
 /* Check ACL's */
 $dn ="";
 if(isset($_GET['n'])){
-  $dn =  base64_decode($_GET['n']);
+  $dn = base64_decode($_GET['n']);
+  $acl_dn = base64_decode($_GET['d']).base64_decode($_GET['n']);
 }elseif(isset($_GET['dn'])){
-  $dn =  base64_decode($_GET['dn']);
+  $dn = base64_decode($_GET['dn']);
+  $acl_dn = base64_decode($_GET['dn']);
 }
-$acl = $ui->get_permissions($dn,"ldapmanager/xlsexport");
+
+$acl = $ui->get_permissions($acl_dn,"ldapmanager/ldif");
 if(!preg_match("/r/",$acl)){
 	msg_dialog::display(_("Permission error"),_("You have no permission to do LDAP exports!"),FATAL_ERROR_DIALOG);
   exit();

@@ -1,3 +1,5 @@
+<font color='red'>Temporary disabled</font>
+<!--
 <p>
   {t}The CSV import plugin provides methods to generate user accounts from a file containing Comma Seperated Values. The administrator can decide which columns should be transfered to which attribute. Note that you must have at least the UID, GIVENNAME and SURENAME set.{/t}
 </p>
@@ -102,7 +104,7 @@
 		
 	</table>
 
-<!-- {html_table loop=$data cols=$anz table_attr='border="1"'}-->
+< ! - - {html_table loop=$data cols=$anz table_attr='border="1"'}- - >
 {/if}
 
 <hr>
@@ -120,3 +122,4 @@
   {/if}
 </div>
 <input type="hidden" name="ignore">
+-->

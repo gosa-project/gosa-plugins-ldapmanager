@@ -67,7 +67,7 @@ class xlsexport extends plugin
 
     // Set values for optionlist in form
     $bases      = array();
-    $acl_bases  = $this->ui->get_module_departments("all");
+    $acl_bases  = $this->ui->get_module_departments("ldapmanager");
     foreach($this->config->idepartments as $base_dn => $name){
       if(in_array_ics($base_dn,$acl_bases)){
         $bases[$base_dn] = $name;
@@ -97,7 +97,7 @@ class xlsexport extends plugin
     /* check alcs for given dn */
     $acls ="";
     if(isset($dn)){
-      $acls = $this->ui->get_permissions($dn,"all/all");
+      $acls = $this->ui->get_permissions($dn,"ldapmanager/ldif");
     }
  
     if(!preg_match("/r/",$acls) && (isset($_POST['sfrmgetsingle']) || isset($_POST['sfrmgetfull']) || isset($_POST['sfrmgetivbb']))){

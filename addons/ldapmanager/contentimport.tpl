@@ -45,7 +45,7 @@
 {else}
 
 <br>
-    <h1>{t}Import successful{/t}</h1>
+    <h3>{t}Import successful{/t}</h3>
 <br>
 
 <div align="right">

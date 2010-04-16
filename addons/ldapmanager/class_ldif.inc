@@ -3,8 +3,8 @@
 class ldif extends plugin
 {
   /* Definitions */
-  var $plHeadline= "LDAP manager";
-  var $plDescription= "This does something";
+  var $plHeadline= "LDAP tools";
+  var $plDescription= "Export LDIF or Excel snapshots of the LDAP tree";
   var $plIcon = "plugins/ldapmanager/images/ldif.png";
 
   /* attribute list for save action */

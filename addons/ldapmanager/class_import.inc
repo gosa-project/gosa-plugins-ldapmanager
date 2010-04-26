@@ -115,7 +115,7 @@ class ldifimport extends plugin
 		break;
 
             default:
-		msg_dialog::display(_("Internal error"), sprintf(_("Undefined flag '%s'!"), $check), ERROR_DIALOG);
+		msg_dialog::display(_("Internal error"), sprintf(_("Undefined flag %s!"), bold($check)), ERROR_DIALOG);
 		break;
           }
         }

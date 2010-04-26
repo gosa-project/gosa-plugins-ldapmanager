@@ -102,7 +102,7 @@ class csvimport extends plugin
     $acl = $this->ui->get_permissions($this->config->current['BASE'],"all/all");
     if(!preg_match("/w/",$acl)){
       if(isset($_POST['userfile']) || isset($_POST['sorted']) || isset($_POST['fileup'])){
-      	msg_dialog::display(_("Permission error"), _("You've no permission to import CSV files."), ERROR_DIALOG);
+      	msg_dialog::display(_("Permission error"), _("You've no permission to import CSV files!"), ERROR_DIALOG);
       }
       return ($smarty->fetch (get_template_path('contentcsv.tpl', TRUE)));
     }
@@ -162,7 +162,7 @@ class csvimport extends plugin
               (!isset($dat['sn']))||(!isset($dat['givenName']))||(!isset($dat['uid']))){
 
             /* Output Error */
-	    msg_dialog::display(_("Error"), _("Need at least 'sn', 'givenName' and 'uid' to create users."), ERROR_DIALOG);
+	    msg_dialog::display(_("Error"), sprintf(_("Need at least %s, %s and %s to create users!"), bold("sn"), bold("givenName"), bold("uid")), ERROR_DIALOG);
           } else {
 
             /* Register usertab to trigger edit dialog */
@@ -282,7 +282,7 @@ class csvimport extends plugin
 
         /* Error? */
         if ($failing){
-	  msg_dialog::display(_("Error"), sprintf(_("Cannot insert entry '%s'!"), $failing), ERROR_DIALOG);
+	  msg_dialog::display(_("Error"), sprintf(_("Cannot add entry %s!"), bold($failing)), ERROR_DIALOG);
         }
         $smarty->assign("error",$failing);
 

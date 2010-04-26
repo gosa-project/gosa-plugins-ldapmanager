@@ -32,13 +32,13 @@ class ldif extends plugin
   static function plInfo()
   {
     return (array(
-        "plShortName"   => _("Ldap manager"),
-        "plDescription" => _("Ldap manager")."&nbsp;("._("import")."/"._("export").")",
+        "plShortName"   => _("LDAP manager"),
+        "plDescription" => _("LDAP manager")."&nbsp;("._("import")."/"._("export").")",
         "plSelfModify"  => FALSE,
         "plDepends"     => array(),
         "plPriority"    => 1,
         "plSection"     => array("addon"),
-        "plCategory"    => array("ldapmanager" => array("objectClass" => "none", "description" => _("Ldap manager"))),
+        "plCategory"    => array("ldapmanager" => array("objectClass" => "none", "description" => _("LDAP manager"))),
 
         "plProvidedAcls" => array()
         ));

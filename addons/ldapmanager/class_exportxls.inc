@@ -103,7 +103,7 @@ class xlsexport extends plugin
     if(!preg_match("/r/",$acls) && (isset($_POST['sfrmgetsingle']) || isset($_POST['sfrmgetfull']) || isset($_POST['sfrmgetivbb']))){
 
       /* Show error msg */      
-      msg_dialog::display(_("Permission error"), sprintf(_("You have no permission to export '%s'!"),LDAP::fix($dn)), ERROR_DIALOG);
+      msg_dialog::display(_("Permission error"), sprintf(_("You have no permission to export %s!"), bold(LDAP::fix($dn))), ERROR_DIALOG);
 
       /* Show main page */
       $smarty->assign("LDIFError",TRUE);

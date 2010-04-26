@@ -66,8 +66,8 @@ class ldifexport extends plugin
             $acls = $this->ui->get_permissions($dn,"ldapmanager/ldif");
             $name = "entryExport.ldif";
             if(!$ldap->dn_exists($dn)){
-                msg_dialog::display(_("Ldap error"),
-                        sprintf(_("No such object '%s'!"),bold(LDAP::fix($dn))),
+                msg_dialog::display(_("LDAP error"),
+                        sprintf(_("No such object %s!"),bold(LDAP::fix($dn))),
                         ERROR_DIALOG);
                 $dn ="";
             }
@@ -83,7 +83,7 @@ class ldifexport extends plugin
             // Check permissions before sending the output
             if(!preg_match("/r/",$acls)){
                 msg_dialog::display(_("Permission error"), 
-                        sprintf(_("You have no permission to export '%s'!"),LDAP::fix($dn)),
+                        sprintf(_("You have no permission to export %s!"), bold(LDAP::fix($dn))),
                         ERROR_DIALOG);
             }else{
                 $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',array(),$scope);

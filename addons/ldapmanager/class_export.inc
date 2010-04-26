@@ -2,122 +2,97 @@
 
 class ldifexport extends plugin
 {
-  /* Definitions */
-  var $plHeadline= "CSV import";
-  var $plDescription= "This does something";
+    /* Definitions */
+    var $plHeadline= "CSV import";
+    var $plDescription= "This does something";
 
-  /* attribute list for save action */
-  var $attributes= array();
-  var $objectclasses= array();
-  var $view_logged = FALSE;
+    /* attribute list for save action */
+    var $attributes= array();
+    var $objectclasses= array();
+    var $view_logged = FALSE;
 
-  function ldifexport (&$config, $dn= NULL)
-  {
-    /* Include config object */
-    $this->config= &$config;
-    $this->ui = get_userinfo();
-  }
+    var $base;
 
-  function execute()
-  {
-    /* Call parent execute */
-    plugin::execute();
-
-    /* Log view */
-    if(!$this->view_logged){
-      $this->view_logged = TRUE;
-      new log("view","all/".get_class($this),$this->dn);
-    }
-
-    /* Set government mode */
-    $smarty= get_smarty();
-
-    $smarty->assign ("govmode", $this->config->get_cfg_value("honourIvbbAttributes"));
-    $smarty->assign("LDIFError",FALSE);
-
-    $smarty->assign("type",FALSE);
-    $smarty->assign("depselectivbb","");
-
-    // fill in old vars in the Export form
-    if((isset($_POST['single']))&&(isset($_POST['sfrmgetsingle']))){
-      $smarty->assign("single",$_POST['single']);
-      $smarty->assign("type","single");
-      $dn = $_POST['single'];
-    }
-    if((isset($_POST['selfull']))&&(isset($_POST['sfrmgetfull']))){
-      $smarty->assign("depselectfull",$_POST['selfull']);
-      $smarty->assign("type","full");
-      $dn = $_POST['selfull'];
-    } else {
-      $smarty->assign("depselectfull", "");
-    }
-    if((isset($_POST['selivbb']))&&(isset($_POST['sfrmgetivbb']))){
-      $smarty->assign("depselectivbb",$_POST['selivbb']);
-      $smarty->assign("type","ivbb");
-      $dn = $_POST['selivbb'];
-    } else {
-      $smarty->assign("depselectivbb", "");
-    }
-
-    // Set values for optionlist in form
-    $bases      = array();
-    $acl_bases  = $this->ui->get_module_departments("ldapmanager");
-    foreach($this->config->idepartments as $base_dn => $name){
-      if(in_array_ics($base_dn,$acl_bases)){
-        $bases[$base_dn] = $name;
-      }
-    }
-    $smarty->assign("deplist", $bases);
-
-    // Get the LDAP link, to generate the Export
-    $ldap = $this->config->get_ldap_link();
-
-    if ($this->config->get_cfg_value('honourIvbbAttributes') == 'true'){
-      $smarty->assign ("govmode", $this->config->get_cfg_value("honourIvbbAttributes"));
-      $smarty->assign("LDIFError",FALSE);
-    }
-
-    if(isset($dn))
+    function ldifexport (&$config, $dn= NULL)
     {
-      if(!($ldap->dn_exists($dn) && $dn != "")){
-        $smarty->assign("LDIFError",TRUE);
-	msg_dialog::display(_("Error"), _("Cannot export selected entries!"), ERROR_DIALOG);
-      }
+        /* Include config object */
+        $this->config= &$config;
+        $this->ui = get_userinfo();
+
+        $this->baseSelector= new baseSelector($this->config->idepartments, $this->config->current['BASE']);
+        $this->baseSelector->setSubmitButton(false);
+        $this->baseSelector->setHeight(300);
+        $this->baseSelector->update(true);
+
     }
 
-    /* check alcs for given dn */
-    $acls ="";
-    if(isset($dn)){
-      $acls = $this->ui->get_permissions($dn,"ldapmanager/ldif");
+    function execute()
+    {
+        /* Call parent execute */
+        plugin::execute();
+
+        /* Log view */
+        if(!$this->view_logged){
+            $this->view_logged = TRUE;
+            new log("view","all/".get_class($this),$this->dn);
+        }
+
+        // Update baseSelector
+        if (!$this->baseSelector->update()) {
+            msg_dialog::display(_("Error"), msgPool::permMove(), ERROR_DIALOG);
+        }
+        if ($this->base != $this->baseSelector->getBase()) {
+            $this->base= $this->baseSelector->getBase();
+            $this->is_modified= TRUE;
+        }
+
+
+        // Assign smarty values 
+        $smarty= get_smarty();
+        $smarty->assign("single","");
+        $smarty->assign("base", $this->baseSelector->render());
+
+        // fill in old vars in the Export form
+        if(isset($_POST['single'])) $smarty->assign("single",$_POST['single']);
+
+        // Get the LDAP link, to generate the Export
+        $ldap = $this->config->get_ldap_link();
+        $dn = "";
+        if(isset($_POST['sfrmgetsingle']))
+        {  
+            $dn   = $_POST['single'];
+            $scope= "base";
+            $acls = $this->ui->get_permissions($dn,"ldapmanager/ldif");
+            $name = "entryExport.ldif";
+            if(!$ldap->dn_exists($dn)){
+                msg_dialog::display(_("Ldap error"),
+                        sprintf(_("No such object '%s'!"),bold(LDAP::fix($dn))),
+                        ERROR_DIALOG);
+                $dn ="";
+            }
+
+        }elseif(isset($_POST['sfrmgetfull'])){
+            $dn   = $this->base;
+            $scope= "sub";
+            $acls = $this->ui->get_permissions($dn,"ldapmanager/ldif");
+            $name = "fullExport.ldif";
+        }
+
+        if(!empty($dn)){
+            // Check permissions before sending the output
+            if(!preg_match("/r/",$acls)){
+                msg_dialog::display(_("Permission error"), 
+                        sprintf(_("You have no permission to export '%s'!"),LDAP::fix($dn)),
+                        ERROR_DIALOG);
+            }else{
+                $data = $ldap->generateLdif($dn, 'objectClass=*',array(),$scope);
+                send_binary_content($data,$name);
+            }
+        }
+
+        // Show the main form
+        return ($smarty->fetch (get_template_path('contentexport.tpl', TRUE)));
     }
-    if((!preg_match("/r/",$acls)) && (isset($dn))){
-
-      /* Show error msg */      
-      msg_dialog::display(_("Permission error"), sprintf(_("You have no permission to export '%s'!"),LDAP::fix($dn)), ERROR_DIALOG);
-
-      /* Show main page */
-      $smarty->assign("LDIFError",TRUE);
-      $smarty->assign("para","");
-    }else{
-
-      // Export a single LDAP entry
-      if(isset($_POST['sfrmgetsingle']))
-      {
-        $smarty->assign("para","?ivbb=2&amp;dn=".base64_encode($_POST['single']));
-      }
-      elseif(isset($_POST['sfrmgetfull']))
-      {
-        $smarty->assign("para","?ivbb=3&amp;dn=".base64_encode($_POST['selfull']));
-      }
-      elseif(isset($_POST['sfrmgetivbb']))
-      {
-        $smarty->assign("para","?ivbb=4&amp;dn=".base64_encode($_POST['selivbb']));
-      }
-    }
-
-    /* Show main page */
-    return ($smarty->fetch (get_template_path('contentexport.tpl', TRUE)));
-  }
 }
 
 

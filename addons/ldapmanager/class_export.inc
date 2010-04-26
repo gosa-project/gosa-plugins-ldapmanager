@@ -85,7 +85,7 @@ class ldifexport extends plugin
                         sprintf(_("You have no permission to export '%s'!"),LDAP::fix($dn)),
                         ERROR_DIALOG);
             }else{
-                $data = $ldap->generateLdif($dn, 'objectClass=*',array(),$scope);
+                $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',array(),$scope);
                 send_binary_content($data,$name);
             }
         }

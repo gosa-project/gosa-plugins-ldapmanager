@@ -445,21 +445,6 @@ function dump_ldap ($mode= 0)
   }
   elseif($mode == 4){ // IVBB LDIF Export
     $dn =  base64_decode($_GET['dn']);
-    /*$display= $ldap->gen_ldif($dn,"(objectClass=ivbbentry)",array(
-      "GouvernmentOrganizationalUnit","houseIdentifier","vocation",
-      "ivbbLastDeliveryCollective","gouvernmentOrganizationalPersonLocality",
-      "gouvernmentOrganizationalUnitDescription","gouvernmentOrganizationalUnitSubjectArea",
-      "functionalTitle","role","certificateSerialNumber","userCertificate","publicVisible",
-      "telephoneNumber","seeAlso","description","title","x121Address","registeredAddress",
-      "destinationIndicator","preferredDeliveryMethod","telexNumber","teletexTerminalIdentifier",
-      "telephoneNumber","internationaliSDNNumber","facsimileTelephoneNumber","street",
-      "postOfficeBox","postalCode","postalAddress","physicalDeliveryOfficeName","ou",
-      "st","l","audio","businessCategory","carLicense","departmentNumber","displayName",
-      "employeeNumber","employeeType","givenName","homePhone","homePostalAddress",
-      "initials","jpegPhoto","labeledURI","mail","manager","mobile","o","pager","photo",
-      "roomNumber","secretary","userCertificate","x500uniqueIdentifier","preferredLanguage",
-      "userSMIMECertificate","userPKCS12"));*/
-
     echo $display;
   }
 }

@@ -49,6 +49,7 @@ class ldifexport extends plugin
 
         // Assign smarty values 
         $smarty= get_smarty();
+        $smarty->assign("usePrototype","true");
         $smarty->assign("single","");
         $smarty->assign("base", $this->baseSelector->render());
 

@@ -76,8 +76,8 @@ class xlsexport extends plugin
     $smarty->assign("deplist", $bases);
     $smarty->assign("choicelist",array( get_people_ou()             =>"users" ,
                                         get_groups_ou()             =>"groups" ,
-                                        get_ou("servgeneric", "serverRDN")          =>"computers",
-                                        get_ou("servgeneric", "serverRDN")           =>"servers",
+                                        get_ou('systemRDN')         =>"computers",
+                                        get_ou('serverRDN')          =>"servers",
                                         "dc=addressbook,"           =>"addressbook"));
 
     // Get the LDAP link, to generate the Export

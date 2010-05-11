@@ -152,7 +152,7 @@ function dump_ldap ($mode= 0)
      /* SYSTEMS 
         Get all systems from th $dn
         and put them into the xls work sheet */
-     case get_ou('systemRDN'): 
+     case get_ou("systemManagement", "systemRDN"): 
 
        $name_section=_("Servers");
        $computers= $ldap->gen_xls($dn,"(&(objectClass=*)(cn=*))",array("cn","description","uid"));
@@ -183,7 +183,7 @@ function dump_ldap ($mode= 0)
      /* SYSTEMS 
        Get all systems from th $dn
        and put them into the xls work sheet */
-     case get_ou('serverRDN'): $servers= $ldap->gen_xls($dn,"(objectClass=*)",array("cn"));
+     case get_ou("servgeneric", "serverRDN"): $servers= $ldap->gen_xls($dn,"(objectClass=*)",array("cn"));
        $intitul=array(_("Server name").":");
 
        //name of the xls file
@@ -288,7 +288,7 @@ function dump_ldap ($mode= 0)
     $computers= $ldap->gen_xls("ou=computers,".$dn,"(objectClass=*)",array("cn","description","uid"));
     $computers_intitul=array(_("Description").":",_("UID").":");
     //data about servers
-    $servers= $ldap->gen_xls(get_ou('serverRDN').$dn,"(objectClass=*)",array("cn"));
+    $servers= $ldap->gen_xls(get_ou("servgeneric", "serverRDN").$dn,"(objectClass=*)",array("cn"));
     $servers_intitul=array(_("Name").":");
     //data about addressbook
     $address= $ldap->gen_xls("dc=addressbook,".$dn,"(objectClass=*)",

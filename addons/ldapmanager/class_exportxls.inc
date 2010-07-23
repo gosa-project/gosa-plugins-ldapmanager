@@ -44,23 +44,23 @@ class xlsexport extends plugin
     /* Check permissions for export */
     // fill in old vars in the Export form
     if((isset($_POST['single']))&&(isset($_POST['sfrmgetsingle']))){
-      $smarty->assign("single",$_POST['single']);
-      $smarty->assign("type","single");
-      $a=$_POST['single'];
-      $b=$_POST['selfull'];
+      $smarty->assign("single",set_post(get_post('single')));
+      $smarty->assign("type",set_post("single"));
+      $a=get_post('single');
+      $b=get_post('selfull');
 
     }
     if((isset($_POST['selfull']))&&(isset($_POST['sfrmgetfull']))){
-      $smarty->assign("depselectfull",$_POST['selfull']);
+      $smarty->assign("depselectfull",set_post(get_post('selfull')));
       $smarty->assign("type","full");
-      $dn = $_POST['selfull'];
+      $dn = get_post('selfull');
     } else {
       $smarty->assign("depselectfull", "");
     }
     if((isset($_POST['selivbb']))&&(isset($_POST['sfrmgetivbb']))){
-      $smarty->assign("depselectivbb",$_POST['selivbb']);
+      $smarty->assign("depselectivbb",set_post(get_post('selivbb')));
       $smarty->assign("type","ivbb");
-      $dn = $_POST['selivbb'];
+      $dn = get_post('selivbb');
     } else {
       $smarty->assign("depselectivbb", "");
     }
@@ -74,11 +74,11 @@ class xlsexport extends plugin
       }
     }
     $smarty->assign("deplist", $bases);
-    $smarty->assign("choicelist",array( get_people_ou()             =>"users" ,
+    $smarty->assign("choicelist",set_post(array( get_people_ou()             =>"users" ,
                                         get_groups_ou()             =>"groups" ,
                                         get_ou("systemManagement", "systemRDN")         =>"computers",
                                         get_ou("servgeneric", "serverRDN")          =>"servers",
-                                        "dc=addressbook,"           =>"addressbook"));
+                                        "dc=addressbook,"           =>"addressbook")));
 
     // Get the LDAP link, to generate the Export
     $ldap = $this->config->get_ldap_link();
@@ -113,15 +113,15 @@ class xlsexport extends plugin
       // Export a single LDAP entry
       if(isset($_POST['sfrmgetsingle']))
       {
-        $smarty->assign("para","?ivbb=2&amp;d=".base64_encode($_POST['single'])."&n=".base64_encode($_POST['selfull']));	
+        $smarty->assign("para","?ivbb=2&amp;d=".base64_encode(get_post('single'))."&n=".base64_encode(get_post('selfull')));	
       }
       elseif(isset($_POST['sfrmgetfull']))
       {
-        $smarty->assign("para","?ivbb=3&amp;dn=".base64_encode($_POST['selfull']));
+        $smarty->assign("para","?ivbb=3&amp;dn=".base64_encode(get_post('selfull')));
       }
       elseif(isset($_POST['sfrmgetivbb']))
       {
-        $smarty->assign("para","?ivbb=4&amp;dn=".base64_encode($_POST['selivbb']));
+        $smarty->assign("para","?ivbb=4&amp;dn=".base64_encode(get_post('selivbb')));
       }
     }
 

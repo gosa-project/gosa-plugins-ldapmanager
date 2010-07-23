@@ -54,14 +54,14 @@ class ldifexport extends plugin
         $smarty->assign("base", $this->baseSelector->render());
 
         // fill in old vars in the Export form
-        if(isset($_POST['single'])) $smarty->assign("single",$_POST['single']);
+        if(isset($_POST['single'])) $smarty->assign("single",set_post(get_post('single')));
 
         // Get the LDAP link, to generate the Export
         $ldap = $this->config->get_ldap_link();
         $dn = "";
         if(isset($_POST['sfrmgetsingle']))
         {  
-            $dn   = $_POST['single'];
+            $dn   = get_post('single');
             $scope= "base";
             $acls = $this->ui->get_permissions($dn,"ldapmanager/ldif");
             $name = "entryExport.ldif";

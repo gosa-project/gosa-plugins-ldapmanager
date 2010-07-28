@@ -25,9 +25,7 @@
 		<LABEL for="selfull">{t}Export complete XLS for{/t}</LABEL>
 	</td>
 	<td>
-		<select id="selfull" name="selfull" size="1" title="{t}Choose the department you want to Export{/t}">
-			{html_options options=$deplist selected=0}
-		</select>
+        {$base}
 	</td>
 	<td>
 		<button type='submit' name='sfrmgetfull'>{t}Export{/t}</button>

@@ -169,29 +169,27 @@ class csvimport extends plugin
                         $this->usertab= new usertabs($this->config, $this->config->data['TABS']['USERTABS'], 'new');
                         $keys = array_keys($dat);
 
-
                         /* Set all submitted vars  */
-                        if(is_array($keys))
+                        if(is_array($keys)){
                             foreach($keys as $key) {
                                 if($key != "status"){
                                     $this->usertab->$key = $dat[$key];
-                                }
-                            }
-
-                        /* Initialize template */
-                        if($this->csvinfo['tplid']!=0){
-                            $this->usertab->adapt_from_template($this->csvinfo['arrtempls'][$this->csvinfo['tplid']]['dn']);
-                            $this->usertab->save_object();
-                        } else {
-
-                            /* Reset vars */
-                            if(is_array($keys))
-                                foreach($keys as $key) {
-                                    if($key != "status"){
-                                        $this->usertab->by_object['user']->$key = $dat[$key];
+                                    foreach($this->usertab->by_object as $pname => $plugin){
+                                        if(isset($this->usertab->by_object[$pname]->$key)){
+                                            $this->usertab->by_object[$pname]->$key = $dat[$key];
+                                        }
                                     }
                                 }
+                            }
                         }
+
+                        // Adapt template values.
+                        if($this->csvinfo['tplid']!=0){
+                            $tpl_dn = $this->csvinfo['arrtempls'][$this->csvinfo['tplid']]['dn'];
+                            $this->usertab->adapt_from_template($tpl_dn,array("uid","cn","givenName","sn"));
+                            $tpl_base  = preg_replace("/^[^,]+,".preg_quote(get_people_ou(), '/i')."/", '', $tpl_dn);
+                            $this->usertab->by_object['user']->base= $tpl_base;
+                        } 
 
                         // Setting user Password 
                         if((isset($dat['userPassword']))&&(!empty($dat['userPassword']))){

@@ -217,7 +217,6 @@ class csvimport extends plugin
                             $this->usertab->save();
                             change_password($this->usertab->dn,$password); 
                         }
-                            $this->usertab->dn;
                     }
                 }
 
@@ -270,8 +269,8 @@ class csvimport extends plugin
 
                     $dataouts = array(); 
                     for($i =$begin; $i <= $end; $i++) {
-                        if(is_array($this->csvinfo['sorteddata'][($i-1)])){
-                            foreach($this->csvinfo['sorteddata'][($i-1)] as $dat){
+                        if(is_array($this->csvinfo['sorteddata'][($i)])){
+                            foreach($this->csvinfo['sorteddata'][($i)] as $dat){
                                 $dataouts[]=$dat;
                             }
                         }

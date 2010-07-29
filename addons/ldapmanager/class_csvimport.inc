@@ -158,7 +158,7 @@ class csvimport extends plugin
                     $dat = $this->csvinfo['sorteddata'][$i];
 
                     /* If not all needed vars set .... */
-                    if(         ( empty($dat['sn']))||( empty($dat['givenName']))||( empty($dat['uid']))||
+                    if(( empty($dat['sn']))||( empty($dat['givenName']))||( empty($dat['uid']))||
                             (!isset($dat['sn']))||(!isset($dat['givenName']))||(!isset($dat['uid']))){
 
                         /* Output Error */
@@ -194,13 +194,12 @@ class csvimport extends plugin
                         }
 
                         // Setting user Password 
-                        if((isset($dat['userPassword']))&&(!empty($dat['userPassword'])))
+                        if((isset($dat['userPassword']))&&(!empty($dat['userPassword']))){
                             $password = $dat['userPassword']; 
-                        else
-                        {
+                        }else{
                             $rand_str="";
                             $feed = "0123456789abcdefghijklmnopqrstuvwxyz";
-                            for ($i=0; $i < 8; $i++)
+                            for ($e=0; $e < 8; $e++)
                             {
                                 $rand_str .= substr($feed, rand(0, strlen($feed)-1), 1);
                             }
@@ -218,6 +217,7 @@ class csvimport extends plugin
                             $this->usertab->save();
                             change_password($this->usertab->dn,$password); 
                         }
+                            $this->usertab->dn;
                     }
                 }
 

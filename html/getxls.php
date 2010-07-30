@@ -230,14 +230,14 @@ function dump_ldap ($mode= 0)
                         _("State").":",_("Function").":");
 
        //name of the xls file
-       $name_section=_("Adressbook");
+       $name_section=_("Address book");
 
        $worksheet = $workbook->addworksheet(_("Servers"));
        $worksheet->set_column('A:B', 51);
 
        //count number of entries
        $address_nbr=count($address);
-       $worksheet->write('A1',sprintf(_("Adressbook of %s on %s"),$n, $date),$title_title);
+       $worksheet->write('A1',sprintf(_("Address book of %s on %s"),$n, $date),$title_title);
        $r=3;
        for($i=1;$i<$address_nbr;$i++)
        {
@@ -311,7 +311,7 @@ function dump_ldap ($mode= 0)
     $worksheet2 = $workbook->addworksheet(_("Groups"));
     $worksheet3 = $workbook->addworksheet(_("Servers"));
     $worksheet4 =$workbook->addworksheet(_("Computers"));
-    $worksheet5 = $workbook->addworksheet(_("Adressbook"));
+    $worksheet5 = $workbook->addworksheet(_("Address book"));
 
     $worksheet->set_column('A:B', 51);
     $worksheet2->set_column('A:B', 51);
@@ -413,7 +413,7 @@ function dump_ldap ($mode= 0)
 
     //count number of entries
     $address_nbr=count($address);
-    $worksheet5->write('A1',sprintf(_("Adressbook of %s on %s"),$dn, $date),$title_title);
+    $worksheet5->write('A1',sprintf(_("Address book of %s on %s"),$dn, $date),$title_title);
 
     $r=3;
     for($i=1;$i<$address_nbr;$i++)

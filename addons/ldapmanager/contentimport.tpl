@@ -7,7 +7,7 @@
 
 {if $type == FALSE || $LDIFError != FALSE}
 <p style="margin-top:5px;">
-  {t}The LDIF import plugin provides methods to upload a set of entries to your running LDAP directory as ldif. You may use this to add new or modify existing entries. Remember that GOsa will not check your ldifs for GOsa conformance.{/t}
+  {t}The LDIF import plug-in provides methods to upload a set of entries to your running LDAP directory as LDIF. You may use this to add new or modify existing entries. Remember that GOsa will not check your LDIF for GOsa conformance.{/t}
 </p>
 
 <hr>

@@ -1,7 +1,7 @@
 <font color='red'>Temporary disabled</font>
 <!--
 <p>
-  {t}The CSV import plugin provides methods to generate user accounts from a file containing Comma Seperated Values. The administrator can decide which columns should be transfered to which attribute. Note that you must have at least the UID, GIVENNAME and SURENAME set.{/t}
+  {t}The CSV import plug-in provides methods to generate user accounts from a file containing Comma Separated Values. The administrator can decide which columns should be transfered to which attribute. Note that you must have at least the UID, GIVENNAME and SURENAME set.{/t}
 </p>
 <hr>
 
@@ -35,7 +35,7 @@
     {if $error == FALSE}
     	 <b>{t}All entries have been written to the LDAP database successfully.{/t}</b>
     {else}
-    	 <b style="color:red">{t}Oups. There was an error during the import of your data.{/t}</b>
+    	 <b style="color:red">{t}There was an error during the import of your data.{/t}</b>
 	{/if}
 
 <b>{t}Here is the status report for the import:{/t} </b>

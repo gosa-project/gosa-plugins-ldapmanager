@@ -1,5 +1,5 @@
 <p style="margin-top:5px;">
-  {t}The LDIF export plugin provides methods to download a complete snapshot of the running LDAP directory as ldif. You may save these files for backup purpose or when initializing a new server.{/t}
+  {t}The LDIF export plug-in provides methods to download a complete snapshot of the running LDAP directory as LDIF. You may save these files for backup purpose or when initializing a new server.{/t}
 </p>
 <hr>
 

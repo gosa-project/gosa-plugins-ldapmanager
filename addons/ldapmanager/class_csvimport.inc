@@ -214,7 +214,7 @@ class csvimport extends plugin
               $failing = $i+1;
               break;
             } else {
-              $this->csvinfo['sorteddata'][$i]['status']=_("ok");
+              $this->csvinfo['sorteddata'][$i]['status']=_("OK");
               $this->usertab->save();
               change_password($this->usertab->dn,$password); 
             }

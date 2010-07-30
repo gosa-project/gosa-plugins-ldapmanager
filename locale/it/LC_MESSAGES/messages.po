@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-28 22:30+0100\n"
+"POT-Creation-Date: 2010-07-30 19:34+0200\n"
 "PO-Revision-Date: 2005-11-18 15:26+0100\n"
 "Last-Translator: Alessandro Amici <a.amici@bopen.it>\n"
 "Language-Team: Italian\n"
@@ -14,25 +14,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.9.1\n"
-
-#: html/getldif.php:82 html/getxls.php:493
-#: addons/ldapmanager/class_import.inc:52
-#: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_csvimport.inc:105
-#: addons/ldapmanager/class_export.inc:96
-#, fuzzy
-msgid "Permission error"
-msgstr "Permessi"
-
-#: html/getldif.php:82
-#, fuzzy
-msgid "You have no permission to create LDAP dumps!"
-msgstr "Non hai il permesso di cambiare la tua password."
-
-#: html/getldif.php:107
-#, fuzzy
-msgid "Error in ivbb parameter!"
-msgstr "Parametro"
 
 #: html/getxls.php:88
 msgid "Birthday"
@@ -182,12 +163,13 @@ msgid "Function"
 msgstr "Funzione"
 
 #: html/getxls.php:233 html/getxls.php:314
-msgid "Adressbook"
+#, fuzzy
+msgid "Address book"
 msgstr "Rubrica"
 
 #: html/getxls.php:240 html/getxls.php:416
-#, php-format
-msgid "Adressbook of %s on %s"
+#, fuzzy, php-format
+msgid "Address book of %s on %s"
 msgstr "Rubrica di %s su %s"
 
 #: html/getxls.php:246
@@ -235,7 +217,15 @@ msgstr ""
 msgid "Computers of %s on %s"
 msgstr "Computer di %s su %s"
 
-#: html/getxls.php:493
+#: html/getxls.php:480 addons/ldapmanager/class_import.inc:52
+#: addons/ldapmanager/class_exportxls.inc:121
+#: addons/ldapmanager/class_csvimport.inc:105
+#: addons/ldapmanager/class_export.inc:85
+#, fuzzy
+msgid "Permission error"
+msgstr "Permessi"
+
+#: html/getxls.php:480
 #, fuzzy
 msgid "You have no permission to do LDAP exports!"
 msgstr "Non hai il permesso di cambiare la tua password."
@@ -245,7 +235,7 @@ msgstr "Non hai il permesso di cambiare la tua password."
 msgid "LDIF export"
 msgstr "Esporta in LDIF"
 
-#: addons/ldapmanager/class_import.inc:7 addons/ldapmanager/class_ldif.inc:7
+#: addons/ldapmanager/class_import.inc:7
 #: addons/ldapmanager/class_exportxls.inc:7
 #: addons/ldapmanager/class_csvimport.inc:7
 #: addons/ldapmanager/class_export.inc:7
@@ -259,7 +249,8 @@ msgstr ""
 #: addons/ldapmanager/class_import.inc:61
 #: addons/ldapmanager/class_import.inc:68
 #: addons/ldapmanager/class_import.inc:76
-#: addons/ldapmanager/class_exportxls.inc:93
+#: addons/ldapmanager/class_exportxls.inc:53
+#: addons/ldapmanager/class_exportxls.inc:108
 #: addons/ldapmanager/class_csvimport.inc:165
 #: addons/ldapmanager/class_csvimport.inc:285
 #: addons/ldapmanager/class_csvimport.inc:335
@@ -267,7 +258,7 @@ msgstr ""
 #: addons/ldapmanager/class_csvimport.inc:346
 #: addons/ldapmanager/class_csvimport.inc:351
 #: addons/ldapmanager/class_csvimport.inc:494
-#: addons/ldapmanager/class_export.inc:84
+#: addons/ldapmanager/class_export.inc:42
 msgid "Error"
 msgstr ""
 
@@ -302,6 +293,7 @@ msgstr ""
 
 #: addons/ldapmanager/class_import.inc:110
 #: addons/ldapmanager/class_import.inc:114
+#: addons/ldapmanager/class_export.inc:69
 #, fuzzy
 msgid "LDAP error"
 msgstr "Errore LDAP"
@@ -313,112 +305,113 @@ msgstr "Terminal Server"
 
 #: addons/ldapmanager/class_import.inc:118
 #, php-format
-msgid "Undefined flag '%s'!"
-msgstr ""
-
-#: addons/ldapmanager/contentimport.tpl:3
-msgid ""
-"The LDIF import plugin provides methods to upload a set of entries to your "
-"running LDAP directory as ldif. You may use this to add new or modify "
-"existing entries. Remember that GOsa will not check your ldifs for GOsa "
-"conformance."
+msgid "Undefined flag %s!"
 msgstr ""
 
 #: addons/ldapmanager/contentimport.tpl:10
+msgid ""
+"The LDIF import plug-in provides methods to upload a set of entries to your "
+"running LDAP directory as LDIF. You may use this to add new or modify "
+"existing entries. Remember that GOsa will not check your LDIF for GOsa "
+"conformance."
+msgstr ""
+
+#: addons/ldapmanager/contentimport.tpl:17
 msgid "Import LDIF File"
 msgstr ""
 
-#: addons/ldapmanager/contentimport.tpl:15
-#: addons/ldapmanager/contentcsv.tpl:14
+#: addons/ldapmanager/contentimport.tpl:22
+#: addons/ldapmanager/contentcsv.tpl:16
 #, fuzzy
 msgid "Browse"
 msgstr "Base"
 
-#: addons/ldapmanager/contentimport.tpl:24
+#: addons/ldapmanager/contentimport.tpl:31
 msgid "Modify existing objects, keep untouched attributes"
 msgstr ""
 
-#: addons/ldapmanager/contentimport.tpl:25
+#: addons/ldapmanager/contentimport.tpl:32
 msgid "Overwrite existing objects, all not listed attributes will be removed"
 msgstr ""
 
-#: addons/ldapmanager/contentimport.tpl:34
+#: addons/ldapmanager/contentimport.tpl:41
 #, fuzzy
 msgid "Remove existing entries first"
 msgstr "Rimuovi le estensioni di posta"
 
-#: addons/ldapmanager/contentimport.tpl:41
+#: addons/ldapmanager/contentimport.tpl:48
 msgid "Import successful"
 msgstr ""
 
-#: addons/ldapmanager/contentimport.tpl:50
-#: addons/ldapmanager/contentcsv.tpl:109 addons/ldapmanager/contentcsv.tpl:112
+#: addons/ldapmanager/contentimport.tpl:60
+#: addons/ldapmanager/contentcsv.tpl:113 addons/ldapmanager/contentcsv.tpl:117
 msgid "Import"
 msgstr "Importa"
 
 #: addons/ldapmanager/contentexportxls.tpl:3
 msgid ""
-"The XLS export plugin provides methods to download a complete snapshot of "
-"the running LDAP directory as xls. You may save these files for "
+"The XLS export plug-in provides methods to download a complete snapshot of "
+"the running LDAP directory as XLS. You may save these files for "
 "documentation."
 msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:10
-#: addons/ldapmanager/contentexport.tpl:10
+#: addons/ldapmanager/contentexport.tpl:9
 msgid "Export single entry"
 msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:14
-msgid "Choose the data you want to Export"
-msgstr ""
+#, fuzzy
+msgid "Choose the data you want to export"
+msgstr "Scegli il dipartimento di base per la ricerca"
 
 #: addons/ldapmanager/contentexportxls.tpl:19
-#: addons/ldapmanager/contentexportxls.tpl:32
+#: addons/ldapmanager/contentexportxls.tpl:31
 #: addons/ldapmanager/contentexportxls.tpl:47
-#: addons/ldapmanager/contentexport.tpl:16
-#: addons/ldapmanager/contentexport.tpl:29
-#: addons/ldapmanager/contentexport.tpl:44
+#: addons/ldapmanager/contentexport.tpl:15
+#: addons/ldapmanager/contentexport.tpl:27
 msgid "Export"
 msgstr "Esporta"
 
-#: addons/ldapmanager/contentexportxls.tpl:24
+#: addons/ldapmanager/contentexportxls.tpl:25
 msgid "Export complete XLS for"
 msgstr ""
 
-#: addons/ldapmanager/contentexportxls.tpl:27
-#: addons/ldapmanager/contentexportxls.tpl:42
-#: addons/ldapmanager/contentexport.tpl:24
-#: addons/ldapmanager/contentexport.tpl:39
-#, fuzzy
-msgid "Choose the department you want to Export"
-msgstr "Scegli il dipartimento di base per la ricerca"
-
 #: addons/ldapmanager/contentexportxls.tpl:39
-#: addons/ldapmanager/contentexport.tpl:36
 msgid "Export IVBB LDIF for"
 msgstr ""
 
-#: addons/ldapmanager/contentexportxls.tpl:58
-#: addons/ldapmanager/contentexport.tpl:55
+#: addons/ldapmanager/contentexportxls.tpl:42
+#, fuzzy
+msgid "Choose the department you want to export"
+msgstr "Scegli il dipartimento di base per la ricerca"
+
+#: addons/ldapmanager/contentexportxls.tpl:59
 msgid "Export successful"
 msgstr ""
 
-#: addons/ldapmanager/contentexportxls.tpl:62
-msgid "Click here to save the complete LDAP database to a xls file"
-msgstr ""
+#: addons/ldapmanager/contentexportxls.tpl:64
+#, fuzzy
+msgid "Click here to save the complete LDAP database to a XLS file"
+msgstr "Non hai il permesso di cambiare la tua password."
 
-#: addons/ldapmanager/contentexportxls.tpl:62
-msgid "Click here to save the LDAP Export to a xls file"
-msgstr ""
+#: addons/ldapmanager/contentexportxls.tpl:64
+#, fuzzy
+msgid "Click here to save the LDAP export to a XLS file"
+msgstr "Non hai il permesso di cambiare la tua password."
 
-#: addons/ldapmanager/class_ldif.inc:6 addons/ldapmanager/main.inc:49
-msgid "LDAP manager"
-msgstr "Amministrazione LDAP"
+#: addons/ldapmanager/class_ldif.inc:6
+#, fuzzy
+msgid "LDAP tools"
+msgstr "Errore LDAP"
+
+#: addons/ldapmanager/class_ldif.inc:7
+msgid "Export LDIF or Excel snapshots of the LDAP tree"
+msgstr ""
 
 #: addons/ldapmanager/class_ldif.inc:35 addons/ldapmanager/class_ldif.inc:36
 #: addons/ldapmanager/class_ldif.inc:41
-#, fuzzy
-msgid "Ldap manager"
+msgid "LDAP manager"
 msgstr "Amministrazione LDAP"
 
 #: addons/ldapmanager/class_ldif.inc:36
@@ -431,10 +424,10 @@ msgstr "Importa"
 msgid "export"
 msgstr "Esporta"
 
-#: addons/ldapmanager/contentexport.tpl:3
+#: addons/ldapmanager/contentexport.tpl:2
 msgid ""
-"The LDIF export plugin provides methods to download a complete snapshot of "
-"the running LDAP directory as ldif. You may save these files for backup "
+"The LDIF export plug-in provides methods to download a complete snapshot of "
+"the running LDAP directory as LDIF. You may save these files for backup "
 "purpose or when initializing a new server."
 msgstr ""
 
@@ -442,73 +435,79 @@ msgstr ""
 msgid "Export complete LDIF for"
 msgstr ""
 
-#: addons/ldapmanager/contentexport.tpl:59
-msgid "Click here to save the complete LDAP database to a file"
-msgstr ""
-
-#: addons/ldapmanager/contentexport.tpl:59
-#, fuzzy
-msgid "Click here to save the LDAP Export "
-msgstr "Non hai il permesso di cambiare la tua password."
-
 #: addons/ldapmanager/class_exportxls.inc:6
 #, fuzzy
 msgid "XLS import"
 msgstr "Importa da formato CSV"
 
-#: addons/ldapmanager/class_exportxls.inc:93
-#: addons/ldapmanager/class_export.inc:84
+#: addons/ldapmanager/class_exportxls.inc:108
 #, fuzzy
 msgid "Cannot export selected entries!"
 msgstr "Gruppo di oggetti"
 
-#: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_export.inc:96
+#: addons/ldapmanager/class_exportxls.inc:121
+#: addons/ldapmanager/class_export.inc:86
 #, fuzzy, php-format
-msgid "You have no permission to export '%s'!"
+msgid "You have no permission to export %s!"
 msgstr "Non hai il permesso di cambiare la tua password."
 
-#: addons/ldapmanager/contentcsv.tpl:2
+#: addons/ldapmanager/contentcsv.tpl:4
 msgid ""
-"The CSV import plugin provides methods to generate user accounts from a file "
-"containing Comma Seperated Values. The administrator can decide which "
+"The CSV import plug-in provides methods to generate user accounts from a "
+"file containing Comma Separated Values. The administrator can decide which "
 "columns should be transfered to which attribute. Note that you must have at "
 "least the UID, GIVENNAME and SURENAME set."
 msgstr ""
 
-#: addons/ldapmanager/contentcsv.tpl:10
+#: addons/ldapmanager/contentcsv.tpl:9
+#, fuzzy
+msgid "CSV export"
+msgstr "Importa da formato CSV"
+
+#: addons/ldapmanager/contentcsv.tpl:12
 msgid "Select CSV file to import"
 msgstr ""
 
-#: addons/ldapmanager/contentcsv.tpl:19
+#: addons/ldapmanager/contentcsv.tpl:21
 #, fuzzy
 msgid "Select template"
 msgstr "Template"
 
-#: addons/ldapmanager/contentcsv.tpl:34
+#: addons/ldapmanager/contentcsv.tpl:36
 msgid "All entries have been written to the LDAP database successfully."
 msgstr ""
 
-#: addons/ldapmanager/contentcsv.tpl:36
-msgid "Oups. There was an error during the import of your data."
+#: addons/ldapmanager/contentcsv.tpl:38
+msgid "There was an error during the import of your data."
 msgstr ""
 
-#: addons/ldapmanager/contentcsv.tpl:39
+#: addons/ldapmanager/contentcsv.tpl:41
 msgid "Here is the status report for the import:"
 msgstr ""
 
-#: addons/ldapmanager/contentcsv.tpl:80
+#: addons/ldapmanager/contentcsv.tpl:46
+#, fuzzy
+msgid "Status report"
+msgstr "Stato"
+
+#: addons/ldapmanager/contentcsv.tpl:82
 #, fuzzy
 msgid "Selected Template"
 msgstr "Template"
 
+#: addons/ldapmanager/contentcsv.tpl:85
+#, fuzzy
+msgid "Template selection"
+msgstr "Impostazioni FAX"
+
 #: addons/ldapmanager/class_csvimport.inc:105
 #, fuzzy
-msgid "You've no permission to import CSV files."
+msgid "You've no permission to import CSV files!"
 msgstr "Non hai il permesso di cambiare la tua password."
 
 #: addons/ldapmanager/class_csvimport.inc:165
-msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
+#, php-format
+msgid "Need at least %s, %s and %s to create users!"
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:213
@@ -517,7 +516,7 @@ msgid "failed"
 msgstr "Fallito"
 
 #: addons/ldapmanager/class_csvimport.inc:217
-msgid "ok"
+msgid "OK"
 msgstr ""
 
 #: addons/ldapmanager/class_csvimport.inc:281
@@ -527,7 +526,7 @@ msgstr "Stato"
 
 #: addons/ldapmanager/class_csvimport.inc:285
 #, fuzzy, php-format
-msgid "Cannot insert entry '%s'!"
+msgid "Cannot add entry %s!"
 msgstr "Rimuovi"
 
 #: addons/ldapmanager/class_csvimport.inc:323
@@ -546,6 +545,26 @@ msgstr "Rimuovi"
 #: addons/ldapmanager/class_export.inc:6
 msgid "CSV import"
 msgstr "Importa da formato CSV"
+
+#: addons/ldapmanager/class_export.inc:70
+#, fuzzy, php-format
+msgid "No such object %s!"
+msgstr "Oggetti membri"
+
+#~ msgid "Adressbook"
+#~ msgstr "Rubrica"
+
+#, fuzzy
+#~ msgid "You have no permission to create LDAP dumps!"
+#~ msgstr "Non hai il permesso di cambiare la tua password."
+
+#, fuzzy
+#~ msgid "Error in ivbb parameter!"
+#~ msgstr "Parametro"
+
+#, fuzzy
+#~ msgid "Ldap manager"
+#~ msgstr "Amministrazione LDAP"
 
 #, fuzzy
 #~ msgid "Ldap manger"

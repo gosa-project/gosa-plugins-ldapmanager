@@ -1,6 +1,6 @@
 {if $LDIFError != FALSE || $type == FALSE}
 <p style="margin-top:5px;">
-  {t}The XLS export plugin provides methods to download a complete snapshot of the running LDAP directory as xls. You may save these files for documentation.{/t}
+  {t}The XLS export plug-in provides methods to download a complete snapshot of the running LDAP directory as XLS. You may save these files for documentation.{/t}
 </p>
 <hr>
 
@@ -11,7 +11,7 @@
 	</td>
 	<td>
 		{*<input id="text" type="text" value="" name="single">*}
-		<select id="single" name="single" size="1" title="{t}Choose the data you want to Export{/t}">
+		<select id="single" name="single" size="1" title="{t}Choose the data you want to export{/t}">
 			{html_options options=$choicelist selected=0}
 		</select>
 	</td>
@@ -39,7 +39,7 @@
 		<LABEL for="selivbb">{t}Export IVBB LDIF for{/t}</LABEL>
 	</td>
 	<td>
-		<select id="selivbb" name="selivbb" size="1" title="{t}Choose the department you want to Export{/t}">
+		<select id="selivbb" name="selivbb" size="1" title="{t}Choose the department you want to export{/t}">
 			{html_options options=$deplist selected=$depselectivbb}
 		</select>
 	</td>
@@ -61,7 +61,7 @@
 	<div>
 		{image path="images/filesaveas.png"}
 
-		<a href = "plugins/ldapmanager/getxls.php{$para}" title="{t}Click here to save the complete LDAP database to a xls file{/t} ">{t}Click here to save the LDAP Export to a xls file{/t}</a>
+		<a href = "plugins/ldapmanager/getxls.php{$para}" title="{t}Click here to save the complete LDAP database to a XLS file{/t} ">{t}Click here to save the LDAP export to a XLS file{/t}</a>
 
 
 		<br>

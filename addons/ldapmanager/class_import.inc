@@ -16,9 +16,14 @@ class ldifimport extends plugin
     function ldifimport (&$config, $dn= NULL)
     {
         /* Include config object */
+        $this->initTime = microtime(TRUE);
         $this->config= &$config;
 
         $this->ui = get_userinfo();
+
+        stats::log('plugin', $class = get_class($this), $category = array($this->acl_category),  $action = 'open',
+                $amount = 1, $duration = (microtime(TRUE) - $this->initTime));
+
     }
 
     function execute()

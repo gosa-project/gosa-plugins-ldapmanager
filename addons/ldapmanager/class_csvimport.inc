@@ -17,10 +17,14 @@ class csvimport extends plugin
 
   function csvimport (&$config, $dn= NULL)
   {
+    $this->initTime = microtime(TRUE);
     /* Include config object */
     $this->config= &$config;
 
     $this->ui = get_userinfo();
+    stats::log('plugin', $class = get_class($this), $category = array($this->acl_category),  $action = 'open',
+            $amount = 1, $duration = (microtime(TRUE) - $this->initTime));
+
   }
 
   function execute()

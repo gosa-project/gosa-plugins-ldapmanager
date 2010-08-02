@@ -14,8 +14,15 @@ class ldif extends plugin
 
     function ldif (&$config)
     {
+        $this->initTime = microtime(TRUE);
+
+        stats::log('plugin', $class = get_class($this), $category = array($this->acl_category),  $action = 'open',
+                $amount = 1, $duration = (microtime(TRUE) - $this->initTime));
+
+
         /* Include config object */
         $this->ldif= new ldiftab($config, $config->data['TABS']['LDIFTAB'], "");
+
     }
 
     function execute()

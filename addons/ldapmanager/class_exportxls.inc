@@ -19,15 +19,18 @@ class xlsexport extends plugin
     function xlsexport (&$config, $dn= NULL)
     {
         /* Include config object */
+        $this->initTime = microtime(TRUE);
         $this->config= &$config;
 
         $this->ui = get_userinfo();
-        
+
         $this->base = $this->config->current['BASE'];
         $this->baseSelector= new baseSelector($this->config->idepartments, $this->base);
         $this->baseSelector->setSubmitButton(false);
         $this->baseSelector->setHeight(300);
         $this->baseSelector->update(true);
+        stats::log('plugin', $class = get_class($this), $category = array($this->acl_category),  $action = 'open',
+                $amount = 1, $duration = (microtime(TRUE) - $this->initTime));
 
     }
 

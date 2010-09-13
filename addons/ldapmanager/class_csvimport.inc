@@ -220,7 +220,9 @@ class csvimport extends plugin
             } else {
               $this->csvinfo['sorteddata'][$i]['status']=_("OK");
               $this->usertab->save();
-              change_password($this->usertab->dn,$password); 
+              if(!change_password($this->usertab->dn,$password,FALSE,'','', $message)){
+                msg_dialog::displayChecks(array($message));
+              }
             }
           }
         }

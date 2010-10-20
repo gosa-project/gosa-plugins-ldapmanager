@@ -84,17 +84,32 @@ class ldifexport extends plugin
         }
 
         if(!empty($dn)){
+
             // Check permissions before sending the output
             if(!preg_match("/r/",$acls)){
                 msg_dialog::display(_("Permission error"), 
                         sprintf(_("You have no permission to export %s!"), bold(LDAP::fix($dn))),
                         ERROR_DIALOG);
             }else{
-                $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',$scope);
-                send_binary_content($data,$name);
+
+                // Check permissions before sending the output
+                if(!preg_match("/r/",$acls)){
+                    msg_dialog::display(_("Permission error"),
+                            sprintf(_("You have no permission to export %s!"), bold(LDAP::fix($dn))),
+                            ERROR_DIALOG);
+                }else{
+                    $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',$scope);
+                    if($data === NULL){
+                        msg_dialog::display(_("Error"),
+                                sprintf(_("Failed to generate ldap export, error was '%s'!"), $ldap->get_error()),
+                                ERROR_DIALOG);
+                    }else{
+                        send_binary_content($data,$name);
+                    }
+                }
             }
         }
-
+    
         // Show the main form
         return ($smarty->fetch (get_template_path('contentexport.tpl', TRUE)));
     }

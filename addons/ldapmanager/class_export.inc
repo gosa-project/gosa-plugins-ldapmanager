@@ -80,14 +80,21 @@ class ldifexport extends plugin
         }
 
         if(!empty($dn)){
+
             // Check permissions before sending the output
             if(!preg_match("/r/",$acls)){
                 msg_dialog::display(_("Permission error"), 
                         sprintf(_("You have no permission to export %s!"), bold(LDAP::fix($dn))),
                         ERROR_DIALOG);
             }else{
-                $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',array(),$scope);
-                send_binary_content($data,$name);
+                $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',array(),$scope, $limit=0);
+                if($data === NULL){
+                    msg_dialog::display(_("Error"), 
+                            sprintf(_("Failed to generate ldap export, error was '%s'!"), $ldap->get_error()),
+                            ERROR_DIALOG);
+                }else{
+                    send_binary_content($data,$name);
+                }
             }
         }
 

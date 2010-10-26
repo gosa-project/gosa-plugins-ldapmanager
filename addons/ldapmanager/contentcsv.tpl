@@ -1,7 +1,7 @@
 <font color='red'>Temporary disabled</font>
 <!--
 <p>
-  {t}The CSV import plug-in provides methods to generate user accounts from a file containing Comma Separated Values. The administrator can decide which columns should be transfered to which attribute. Note that you must have at least the UID, GIVENNAME and SURENAME set.{/t}
+  {t}The CSV import plug-in provides methods to generate user accounts from a file containing Comma Separated Values. The administrator can decide which columns should be transfered to which attribute. Note that you must have at least the UID, GIVENNAME and SURNAME set.{/t}
 </p>
 <hr>
 

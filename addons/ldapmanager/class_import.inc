@@ -60,6 +60,8 @@ class ldifimport extends plugin
                 $smarty->assign("type","importfile");
                 $handle = NULL;
 
+                $filename = gosa_file_name($_FILES['userfile']['tmp_name']);
+
                 // Check if there is a file submitted
                 if(!$_FILES['userfile']['size'] > 0 )
                 {
@@ -68,7 +70,7 @@ class ldifimport extends plugin
                 }
 
                 // Is there a tmp file, which we can use ?
-                elseif(!file_exists($_FILES['userfile']['tmp_name']))  
+                elseif(!file_exists($filename))  
                 {
                     msg_dialog::display(_("Error"), sprintf(_("Cannot read uploaded file: %s"), _("file not found")), ERROR_DIALOG);
                     $smarty->assign("LDIFError",TRUE);
@@ -76,7 +78,7 @@ class ldifimport extends plugin
                 }
 
                 // Can we open the tmp file, for reading
-                elseif(!$handle = @fopen($_FILES['userfile']['tmp_name'],"r"))
+                elseif(!$handle = @fopen($filename,"r"))
                 {
                     msg_dialog::display(_("Error"), sprintf(_("Cannot read uploaded file: %s"), _("file not readable")), ERROR_DIALOG);
                     $smarty->assign("LDIFError",TRUE);  

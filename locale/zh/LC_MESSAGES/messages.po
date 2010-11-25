@@ -7,33 +7,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-28 22:30+0100\n"
+"POT-Creation-Date: 2010-10-29 19:38+0200\n"
 "PO-Revision-Date: 2007-06-03 12:27+0800\n"
 "Last-Translator: Jiang Xin <worldhello.net@gmail.com>\n"
 "Language-Team: Chinese Simplified <zh@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "X-Generator: KBabel 1.11.4\n"
-
-#: html/getldif.php:82 html/getxls.php:493
-#: addons/ldapmanager/class_import.inc:52
-#: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_csvimport.inc:105
-#: addons/ldapmanager/class_export.inc:96
-#, fuzzy
-msgid "Permission error"
-msgstr "允许"
-
-#: html/getldif.php:82
-#, fuzzy
-msgid "You have no permission to create LDAP dumps!"
-msgstr "您无权删除这个部门。"
-
-#: html/getldif.php:107
-#, fuzzy
-msgid "Error in ivbb parameter!"
-msgstr "检查参数"
 
 #: html/getxls.php:88
 msgid "Birthday"
@@ -234,7 +216,15 @@ msgstr "全部"
 msgid "Computers of %s on %s"
 msgstr "%s计算机于%s"
 
-#: html/getxls.php:493
+#: html/getxls.php:478 addons/ldapmanager/class_import.inc:52
+#: addons/ldapmanager/class_exportxls.inc:106
+#: addons/ldapmanager/class_csvimport.inc:105
+#: addons/ldapmanager/class_export.inc:86
+#, fuzzy
+msgid "Permission error"
+msgstr "允许"
+
+#: html/getxls.php:478
 #, fuzzy
 msgid "You have no permission to do LDAP exports!"
 msgstr "您无权查看和编辑 ACL。"
@@ -262,47 +252,49 @@ msgstr "您无权执行这个方法！"
 #: addons/ldapmanager/class_import.inc:76
 #: addons/ldapmanager/class_exportxls.inc:93
 #: addons/ldapmanager/class_csvimport.inc:165
-#: addons/ldapmanager/class_csvimport.inc:285
-#: addons/ldapmanager/class_csvimport.inc:335
-#: addons/ldapmanager/class_csvimport.inc:340
-#: addons/ldapmanager/class_csvimport.inc:346
-#: addons/ldapmanager/class_csvimport.inc:351
-#: addons/ldapmanager/class_csvimport.inc:494
-#: addons/ldapmanager/class_export.inc:84
+#: addons/ldapmanager/class_csvimport.inc:282
+#: addons/ldapmanager/class_csvimport.inc:332
+#: addons/ldapmanager/class_csvimport.inc:337
+#: addons/ldapmanager/class_csvimport.inc:343
+#: addons/ldapmanager/class_csvimport.inc:348
+#: addons/ldapmanager/class_csvimport.inc:491
+#: addons/ldapmanager/class_export.inc:42
+#: addons/ldapmanager/class_export.inc:92
 msgid "Error"
 msgstr "错误"
 
 #: addons/ldapmanager/class_import.inc:61
 #: addons/ldapmanager/class_import.inc:68
 #: addons/ldapmanager/class_import.inc:76
-#: addons/ldapmanager/class_csvimport.inc:335
-#: addons/ldapmanager/class_csvimport.inc:340
-#: addons/ldapmanager/class_csvimport.inc:346
-#: addons/ldapmanager/class_csvimport.inc:351
+#: addons/ldapmanager/class_csvimport.inc:332
+#: addons/ldapmanager/class_csvimport.inc:337
+#: addons/ldapmanager/class_csvimport.inc:343
+#: addons/ldapmanager/class_csvimport.inc:348
 #, fuzzy, php-format
 msgid "Cannot read uploaded file: %s"
 msgstr "无法创建文件 '%s'。"
 
 #: addons/ldapmanager/class_import.inc:61
-#: addons/ldapmanager/class_csvimport.inc:340
+#: addons/ldapmanager/class_csvimport.inc:337
 #, fuzzy
 msgid "file is empty"
 msgstr "选择的文件为空。"
 
 #: addons/ldapmanager/class_import.inc:68
-#: addons/ldapmanager/class_csvimport.inc:335
-#: addons/ldapmanager/class_csvimport.inc:346
+#: addons/ldapmanager/class_csvimport.inc:332
+#: addons/ldapmanager/class_csvimport.inc:343
 #, fuzzy
 msgid "file not found"
 msgstr "文件"
 
 #: addons/ldapmanager/class_import.inc:76
-#: addons/ldapmanager/class_csvimport.inc:351
+#: addons/ldapmanager/class_csvimport.inc:348
 msgid "file not readable"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:110
 #: addons/ldapmanager/class_import.inc:114
+#: addons/ldapmanager/class_export.inc:69
 #, fuzzy
 msgid "LDAP error"
 msgstr "LDAP 错误:"
@@ -369,7 +361,7 @@ msgstr ""
 "文件用于文档。"
 
 #: addons/ldapmanager/contentexportxls.tpl:10
-#: addons/ldapmanager/contentexport.tpl:10
+#: addons/ldapmanager/contentexport.tpl:9
 msgid "Export single entry"
 msgstr "导出单条记录"
 
@@ -380,9 +372,8 @@ msgstr "选择您要导出的数据"
 #: addons/ldapmanager/contentexportxls.tpl:19
 #: addons/ldapmanager/contentexportxls.tpl:32
 #: addons/ldapmanager/contentexportxls.tpl:47
-#: addons/ldapmanager/contentexport.tpl:16
-#: addons/ldapmanager/contentexport.tpl:29
-#: addons/ldapmanager/contentexport.tpl:44
+#: addons/ldapmanager/contentexport.tpl:15
+#: addons/ldapmanager/contentexport.tpl:27
 msgid "Export"
 msgstr "导出"
 
@@ -392,18 +383,14 @@ msgstr "导出整个 XLS"
 
 #: addons/ldapmanager/contentexportxls.tpl:27
 #: addons/ldapmanager/contentexportxls.tpl:42
-#: addons/ldapmanager/contentexport.tpl:24
-#: addons/ldapmanager/contentexport.tpl:39
 msgid "Choose the department you want to Export"
 msgstr "选择要导出的部门"
 
 #: addons/ldapmanager/contentexportxls.tpl:39
-#: addons/ldapmanager/contentexport.tpl:36
 msgid "Export IVBB LDIF for"
 msgstr "导出 IVBB LDIF"
 
 #: addons/ldapmanager/contentexportxls.tpl:58
-#: addons/ldapmanager/contentexport.tpl:55
 msgid "Export successful"
 msgstr "导出成功"
 
@@ -435,7 +422,7 @@ msgstr "导入"
 msgid "export"
 msgstr "导出"
 
-#: addons/ldapmanager/contentexport.tpl:3
+#: addons/ldapmanager/contentexport.tpl:2
 msgid ""
 "The LDIF export plugin provides methods to download a complete snapshot of "
 "the running LDAP directory as ldif. You may save these files for backup "
@@ -448,36 +435,27 @@ msgstr ""
 msgid "Export complete LDIF for"
 msgstr "导出整个 LDIF "
 
-#: addons/ldapmanager/contentexport.tpl:59
-msgid "Click here to save the complete LDAP database to a file"
-msgstr "点击这里保存整个 LDAP 数据库到一个文件"
-
-#: addons/ldapmanager/contentexport.tpl:59
-msgid "Click here to save the LDAP Export "
-msgstr "点击这里保存 LDAP 导出"
-
 #: addons/ldapmanager/class_exportxls.inc:6
 msgid "XLS import"
 msgstr "导入 XLS"
 
 #: addons/ldapmanager/class_exportxls.inc:93
-#: addons/ldapmanager/class_export.inc:84
 #, fuzzy
 msgid "Cannot export selected entries!"
 msgstr "选择要添加的对象"
 
 #: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_export.inc:96
 #, fuzzy, php-format
 msgid "You have no permission to export '%s'!"
 msgstr "您无权进行 LDAP 导出。"
 
 #: addons/ldapmanager/contentcsv.tpl:2
+#, fuzzy
 msgid ""
 "The CSV import plugin provides methods to generate user accounts from a file "
 "containing Comma Seperated Values. The administrator can decide which "
 "columns should be transfered to which attribute. Note that you must have at "
-"least the UID, GIVENNAME and SURENAME set."
+"least the UID, GIVENNAME and SURNAME set."
 msgstr ""
 "该 CVS 导入插件提供一个从逗号分隔格式文件创建用户账号的功能。管理员可以决定哪"
 "一个列被导入到哪一个属性。注意必须包含 UID, GIVENNAME 和 SURENAME 字段"
@@ -516,32 +494,32 @@ msgstr "您无权执行 CSV 导入。"
 msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
 msgstr "需要 'sn', 'givenName' 和 'uid' 来创建用户。"
 
-#: addons/ldapmanager/class_csvimport.inc:213
+#: addons/ldapmanager/class_csvimport.inc:210
 msgid "failed"
 msgstr "失败"
 
-#: addons/ldapmanager/class_csvimport.inc:217
+#: addons/ldapmanager/class_csvimport.inc:214
 msgid "ok"
 msgstr "ok"
 
-#: addons/ldapmanager/class_csvimport.inc:281
+#: addons/ldapmanager/class_csvimport.inc:278
 msgid "status"
 msgstr "状态"
 
-#: addons/ldapmanager/class_csvimport.inc:285
+#: addons/ldapmanager/class_csvimport.inc:282
 #, fuzzy, php-format
 msgid "Cannot insert entry '%s'!"
 msgstr "未知 FAIstate %s"
 
-#: addons/ldapmanager/class_csvimport.inc:323
+#: addons/ldapmanager/class_csvimport.inc:320
 msgid "Information"
 msgstr "提示信息"
 
-#: addons/ldapmanager/class_csvimport.inc:323
+#: addons/ldapmanager/class_csvimport.inc:320
 msgid "Nothing to import!"
 msgstr "没有数据导入！"
 
-#: addons/ldapmanager/class_csvimport.inc:494
+#: addons/ldapmanager/class_csvimport.inc:491
 #, fuzzy
 msgid "Cannot find CSV data in the selected file!"
 msgstr "无法创建文件 '%s'。"
@@ -549,6 +527,35 @@ msgstr "无法创建文件 '%s'。"
 #: addons/ldapmanager/class_export.inc:6
 msgid "CSV import"
 msgstr "CSV 导入"
+
+#: addons/ldapmanager/class_export.inc:70
+#, fuzzy, php-format
+msgid "No such object %s!"
+msgstr "成员对象"
+
+#: addons/ldapmanager/class_export.inc:87
+#, fuzzy, php-format
+msgid "You have no permission to export %s!"
+msgstr "您无权进行 LDAP 导出。"
+
+#: addons/ldapmanager/class_export.inc:93
+#, php-format
+msgid "Failed to generate ldap export, error was '%s'!"
+msgstr ""
+
+#, fuzzy
+#~ msgid "You have no permission to create LDAP dumps!"
+#~ msgstr "您无权删除这个部门。"
+
+#, fuzzy
+#~ msgid "Error in ivbb parameter!"
+#~ msgstr "检查参数"
+
+#~ msgid "Click here to save the complete LDAP database to a file"
+#~ msgstr "点击这里保存整个 LDAP 数据库到一个文件"
+
+#~ msgid "Click here to save the LDAP Export "
+#~ msgstr "点击这里保存 LDAP 导出"
 
 #, fuzzy
 #~ msgid "Ldap manger"

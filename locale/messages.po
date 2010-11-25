@@ -8,29 +8,14 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2010-01-28 22:30+0100\n"
+"POT-Creation-Date: 2010-10-29 19:38+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=CHARSET\n"
 "Content-Transfer-Encoding: 8bit\n"
-
-#: html/getldif.php:82 html/getxls.php:493
-#: addons/ldapmanager/class_import.inc:52
-#: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_csvimport.inc:105
-#: addons/ldapmanager/class_export.inc:96
-msgid "Permission error"
-msgstr ""
-
-#: html/getldif.php:82
-msgid "You have no permission to create LDAP dumps!"
-msgstr ""
-
-#: html/getldif.php:107
-msgid "Error in ivbb parameter!"
-msgstr ""
 
 #: html/getxls.php:88
 msgid "Birthday"
@@ -231,7 +216,14 @@ msgstr ""
 msgid "Computers of %s on %s"
 msgstr ""
 
-#: html/getxls.php:493
+#: html/getxls.php:478 addons/ldapmanager/class_import.inc:52
+#: addons/ldapmanager/class_exportxls.inc:106
+#: addons/ldapmanager/class_csvimport.inc:105
+#: addons/ldapmanager/class_export.inc:86
+msgid "Permission error"
+msgstr ""
+
+#: html/getxls.php:478
 msgid "You have no permission to do LDAP exports!"
 msgstr ""
 
@@ -256,45 +248,47 @@ msgstr ""
 #: addons/ldapmanager/class_import.inc:76
 #: addons/ldapmanager/class_exportxls.inc:93
 #: addons/ldapmanager/class_csvimport.inc:165
-#: addons/ldapmanager/class_csvimport.inc:285
-#: addons/ldapmanager/class_csvimport.inc:335
-#: addons/ldapmanager/class_csvimport.inc:340
-#: addons/ldapmanager/class_csvimport.inc:346
-#: addons/ldapmanager/class_csvimport.inc:351
-#: addons/ldapmanager/class_csvimport.inc:494
-#: addons/ldapmanager/class_export.inc:84
+#: addons/ldapmanager/class_csvimport.inc:282
+#: addons/ldapmanager/class_csvimport.inc:332
+#: addons/ldapmanager/class_csvimport.inc:337
+#: addons/ldapmanager/class_csvimport.inc:343
+#: addons/ldapmanager/class_csvimport.inc:348
+#: addons/ldapmanager/class_csvimport.inc:491
+#: addons/ldapmanager/class_export.inc:42
+#: addons/ldapmanager/class_export.inc:92
 msgid "Error"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:61
 #: addons/ldapmanager/class_import.inc:68
 #: addons/ldapmanager/class_import.inc:76
-#: addons/ldapmanager/class_csvimport.inc:335
-#: addons/ldapmanager/class_csvimport.inc:340
-#: addons/ldapmanager/class_csvimport.inc:346
-#: addons/ldapmanager/class_csvimport.inc:351
+#: addons/ldapmanager/class_csvimport.inc:332
+#: addons/ldapmanager/class_csvimport.inc:337
+#: addons/ldapmanager/class_csvimport.inc:343
+#: addons/ldapmanager/class_csvimport.inc:348
 #, php-format
 msgid "Cannot read uploaded file: %s"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:61
-#: addons/ldapmanager/class_csvimport.inc:340
+#: addons/ldapmanager/class_csvimport.inc:337
 msgid "file is empty"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:68
-#: addons/ldapmanager/class_csvimport.inc:335
-#: addons/ldapmanager/class_csvimport.inc:346
+#: addons/ldapmanager/class_csvimport.inc:332
+#: addons/ldapmanager/class_csvimport.inc:343
 msgid "file not found"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:76
-#: addons/ldapmanager/class_csvimport.inc:351
+#: addons/ldapmanager/class_csvimport.inc:348
 msgid "file not readable"
 msgstr ""
 
 #: addons/ldapmanager/class_import.inc:110
 #: addons/ldapmanager/class_import.inc:114
+#: addons/ldapmanager/class_export.inc:69
 msgid "LDAP error"
 msgstr ""
 
@@ -353,7 +347,7 @@ msgid ""
 msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:10
-#: addons/ldapmanager/contentexport.tpl:10
+#: addons/ldapmanager/contentexport.tpl:9
 msgid "Export single entry"
 msgstr ""
 
@@ -364,9 +358,8 @@ msgstr ""
 #: addons/ldapmanager/contentexportxls.tpl:19
 #: addons/ldapmanager/contentexportxls.tpl:32
 #: addons/ldapmanager/contentexportxls.tpl:47
-#: addons/ldapmanager/contentexport.tpl:16
-#: addons/ldapmanager/contentexport.tpl:29
-#: addons/ldapmanager/contentexport.tpl:44
+#: addons/ldapmanager/contentexport.tpl:15
+#: addons/ldapmanager/contentexport.tpl:27
 msgid "Export"
 msgstr ""
 
@@ -376,18 +369,14 @@ msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:27
 #: addons/ldapmanager/contentexportxls.tpl:42
-#: addons/ldapmanager/contentexport.tpl:24
-#: addons/ldapmanager/contentexport.tpl:39
 msgid "Choose the department you want to Export"
 msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:39
-#: addons/ldapmanager/contentexport.tpl:36
 msgid "Export IVBB LDIF for"
 msgstr ""
 
 #: addons/ldapmanager/contentexportxls.tpl:58
-#: addons/ldapmanager/contentexport.tpl:55
 msgid "Export successful"
 msgstr ""
 
@@ -416,7 +405,7 @@ msgstr ""
 msgid "export"
 msgstr ""
 
-#: addons/ldapmanager/contentexport.tpl:3
+#: addons/ldapmanager/contentexport.tpl:2
 msgid ""
 "The LDIF export plugin provides methods to download a complete snapshot of "
 "the running LDAP directory as ldif. You may save these files for backup "
@@ -427,25 +416,15 @@ msgstr ""
 msgid "Export complete LDIF for"
 msgstr ""
 
-#: addons/ldapmanager/contentexport.tpl:59
-msgid "Click here to save the complete LDAP database to a file"
-msgstr ""
-
-#: addons/ldapmanager/contentexport.tpl:59
-msgid "Click here to save the LDAP Export "
-msgstr ""
-
 #: addons/ldapmanager/class_exportxls.inc:6
 msgid "XLS import"
 msgstr ""
 
 #: addons/ldapmanager/class_exportxls.inc:93
-#: addons/ldapmanager/class_export.inc:84
 msgid "Cannot export selected entries!"
 msgstr ""
 
 #: addons/ldapmanager/class_exportxls.inc:106
-#: addons/ldapmanager/class_export.inc:96
 #, php-format
 msgid "You have no permission to export '%s'!"
 msgstr ""
@@ -455,7 +434,7 @@ msgid ""
 "The CSV import plugin provides methods to generate user accounts from a file "
 "containing Comma Seperated Values. The administrator can decide which "
 "columns should be transfered to which attribute. Note that you must have at "
-"least the UID, GIVENNAME and SURENAME set."
+"least the UID, GIVENNAME and SURNAME set."
 msgstr ""
 
 #: addons/ldapmanager/contentcsv.tpl:10
@@ -490,35 +469,50 @@ msgstr ""
 msgid "Need at least 'sn', 'givenName' and 'uid' to create users."
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:213
+#: addons/ldapmanager/class_csvimport.inc:210
 msgid "failed"
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:217
+#: addons/ldapmanager/class_csvimport.inc:214
 msgid "ok"
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:281
+#: addons/ldapmanager/class_csvimport.inc:278
 msgid "status"
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:285
+#: addons/ldapmanager/class_csvimport.inc:282
 #, php-format
 msgid "Cannot insert entry '%s'!"
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:323
+#: addons/ldapmanager/class_csvimport.inc:320
 msgid "Information"
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:323
+#: addons/ldapmanager/class_csvimport.inc:320
 msgid "Nothing to import!"
 msgstr ""
 
-#: addons/ldapmanager/class_csvimport.inc:494
+#: addons/ldapmanager/class_csvimport.inc:491
 msgid "Cannot find CSV data in the selected file!"
 msgstr ""
 
 #: addons/ldapmanager/class_export.inc:6
 msgid "CSV import"
+msgstr ""
+
+#: addons/ldapmanager/class_export.inc:70
+#, php-format
+msgid "No such object %s!"
+msgstr ""
+
+#: addons/ldapmanager/class_export.inc:87
+#, php-format
+msgid "You have no permission to export %s!"
+msgstr ""
+
+#: addons/ldapmanager/class_export.inc:93
+#, php-format
+msgid "Failed to generate ldap export, error was '%s'!"
 msgstr ""

@@ -101,7 +101,7 @@ class ldifexport extends plugin
                     $data = $ldap->generateLdif(LDAP::fix($dn), 'objectClass=*',$scope);
                     if($data === NULL){
                         msg_dialog::display(_("Error"),
-                                sprintf(_("Failed to generate ldap export, error was '%s'!"), $ldap->get_error()),
+                                sprintf(_("Failed to generate LDAP export: %s"), $ldap->get_error()),
                                 ERROR_DIALOG);
                     }else{
                         send_binary_content($data,$name);

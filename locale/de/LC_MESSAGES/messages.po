@@ -456,7 +456,6 @@ msgid "You have no permission to export %s!"
 msgstr "Sie haben keine Berechtigung, um '%s' zu exportieren!"
 
 #: addons/ldapmanager/contentcsv.tpl:4
-#, fuzzy
 msgid ""
 "The CSV import plug-in provides methods to generate user accounts from a "
 "file containing Comma Separated Values. The administrator can decide which "
@@ -466,7 +465,7 @@ msgstr ""
 "Das CSV Import Plugin stellt Methoden bereit, um Benutzerkonten aus einer "
 "CSV Datei zu generieren. Der Administrator kann die Zuordnung zwischen "
 "Spalte und Benutzerattribut frei wählen. Es müssen jedoch mindestens die "
-"Attribute UID, GIVENNAME und SURENAME gesetzt sein."
+"Attribute UID, GIVENNAME und SURNAME gesetzt sein."
 
 #: addons/ldapmanager/contentcsv.tpl:9
 msgid "CSV export"

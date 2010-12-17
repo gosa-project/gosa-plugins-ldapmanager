@@ -67,7 +67,7 @@ class ldifexport extends plugin
             $name = "entryExport.ldif";
             if(!$ldap->dn_exists($dn)){
                 msg_dialog::display(_("LDAP error"),
-                        sprintf(_("No such object %s!"),bold(LDAP::fix($dn))),
+                        sprintf(_("No such object %s!"),LDAP::fix($dn)),
                         ERROR_DIALOG);
                 $dn ="";
             }

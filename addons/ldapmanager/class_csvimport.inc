@@ -175,17 +175,25 @@ class csvimport extends plugin
 
 
             /* Set all submitted vars  */
-            if(is_array($keys))
+            if(is_array($keys)){
               foreach($keys as $key) {
                 if($key != "status"){
                   $this->usertab->$key = $dat[$key];
+                  foreach($this->usertab->by_object as $pname => $plugin){
+                    if(isset($this->usertab->by_object[$pname]->$key)){
+                      $this->usertab->by_object[$pname]->$key = $dat[$key];
+                    }
+                  }
                 }
               }
+            }
 
             /* Initialize template */
             if($this->csvinfo['tplid']!=0){
-              $this->usertab->adapt_from_template($this->csvinfo['arrtempls'][$this->csvinfo['tplid']]['dn']);
-              $this->usertab->save_object();
+              $tpl_dn = $this->csvinfo['arrtempls'][$this->csvinfo['tplid']]['dn'];
+              $this->usertab->adapt_from_template($tpl_dn,array("uid","cn","givenName","sn"));
+              $tpl_base  = preg_replace("/^[^,]+,".preg_quote(get_people_ou(), '/i')."/", '', $tpl_dn);
+              $this->usertab->by_object['user']->base= $tpl_base;
             } else {
 
               /* Reset vars */

@@ -13,7 +13,7 @@ class ldifimport extends plugin
     var $ui;
     var $view_logged = FALSE;
 
-    function ldifimport (&$config, $dn= NULL)
+    function __construct(&$config, $dn= NULL)
     {
         /* Include config object */
         $this->initTime = microtime(TRUE);

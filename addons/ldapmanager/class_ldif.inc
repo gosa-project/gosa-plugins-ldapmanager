@@ -12,7 +12,7 @@ class ldif extends plugin
     var $objectclasses= array();
     var $ldif;
 
-    function ldif (&$config)
+    function __construct(&$config)
     {
         $this->initTime = microtime(TRUE);
 

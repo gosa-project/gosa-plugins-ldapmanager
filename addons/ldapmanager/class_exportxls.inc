@@ -16,7 +16,7 @@ class xlsexport extends plugin
     var $base ="";
     var $baseSelector ="";
 
-    function xlsexport (&$config, $dn= NULL)
+    function __construct(&$config, $dn= NULL)
     {
         /* Include config object */
         $this->initTime = microtime(TRUE);

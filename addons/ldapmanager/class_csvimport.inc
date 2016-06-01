@@ -15,7 +15,7 @@ class csvimport extends plugin
   var $objectclasses= array();
   var $view_logged = FALSE;
 
-  function csvimport (&$config, $dn= NULL)
+  function __construct(&$config, $dn= NULL)
   {
     $this->initTime = microtime(TRUE);
     /* Include config object */

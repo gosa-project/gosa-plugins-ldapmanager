@@ -13,7 +13,7 @@ class ldifexport extends plugin
 
     var $base;
 
-    function ldifexport (&$config, $dn= NULL)
+    function __construct(&$config, $dn= NULL)
     {
 
         $this->initTime = microtime(TRUE);

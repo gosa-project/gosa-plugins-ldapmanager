@@ -3,7 +3,7 @@
 class ldiftab extends tabs
 {
 
-  function ldiftab($config, $data, $dn)
+  function __construct($config, $data, $dn)
   {
     tabs::tabs($config, $data, $dn);
   }

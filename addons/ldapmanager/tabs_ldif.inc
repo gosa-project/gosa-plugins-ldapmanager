@@ -5,7 +5,7 @@ class ldiftab extends tabs
 
   function __construct($config, $data, $dn)
   {
-    tabs::tabs($config, $data, $dn);
+    tabs::__construct($config, $data, $dn);
   }
 
   function save_object($save_current= FALSE)

@@ -1,13 +1,5 @@
 <p>
-  {t}The CSV import plug-in provides a method for generating user accounts from
-     a file containing Comma Separated Values. The administrator can decide
-     which column of the CSV file should be mapped to which LDAP attribute.
-  {/t}
-</p>
-<p>
-  {t}At least, entries for the following fields have to be provided: login (uid),
-     last name (sn), first name (givenName) and password (userPassword).
-  {/t}
+  {t}The CSV import plug-in provides methods to generate user accounts from a file containing Comma Separated Values. The administrator can decide which columns should be transfered to which attribute. Note that you must have at least the UID, GIVENNAME and SURNAME set.{/t}
 </p>
 <hr>
 

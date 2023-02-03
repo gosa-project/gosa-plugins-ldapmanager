@@ -15,6 +15,8 @@ class csvimport extends plugin
   var $objectclasses= array();
   var $view_logged = FALSE;
 
+  var $ui;
+
   function __construct(&$config, $dn= NULL)
   {
     $this->initTime = microtime(TRUE);

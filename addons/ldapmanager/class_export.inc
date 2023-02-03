@@ -12,6 +12,9 @@ class ldifexport extends plugin
     var $view_logged = FALSE;
 
     var $base;
+    var $baseSelector;
+
+    var $ui;
 
     function __construct(&$config, $dn= NULL)
     {

@@ -105,17 +105,21 @@
 < ! - - {html_table loop=$data cols=$anz table_attr='border="1"'}- - >
 {/if}
 
+<script>
+  function markClass() {
+       document.mainform.arg.value='csvimport';
+  }
+</script>
+
 <hr>
 <div class="plugin-actions">
   {if $fileup != TRUE}
-    <button type='submit' name='fileup'>{t}Import{/t}</button>
-
+    <button onclick="markClass()" type='submit' name='fileup'>{t}Import{/t}</button>
   {else}
     {if $sorted == FALSE}
-      <input name="sorted" value="{t}Import{/t}" type ="submit">
+      <input onclick="markClass()" name="sorted" value="{t}Import{/t}" type ="submit">
     {else}
-      <button type='submit' name='back{$plug}'>{msgPool type=backButton}</button>
-
+      <button onclick="markClass()" type='submit' name='back{$plug}'>{msgPool type=backButton}</button>
     {/if}
   {/if}
 </div>

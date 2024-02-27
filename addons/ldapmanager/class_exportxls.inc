@@ -3,8 +3,8 @@
 class xlsexport extends plugin
 {
     /* Definitions */
-    var $plHeadline= "XLS import";
-    var $plDescription= "This does something";
+    var $plHeadline= "XLS export";
+    var $plDescription= "This exports .xls files.";
     var $access= "";
 
     /* attribute list for save action */

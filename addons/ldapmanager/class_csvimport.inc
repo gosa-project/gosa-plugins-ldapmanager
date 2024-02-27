@@ -3,8 +3,8 @@
 class csvimport extends plugin
 {
   /* Definitions */
-  var $plHeadline= "LDIF export";
-  var $plDescription= "This does something";
+  var $plHeadline= "CSV import";
+  var $plDescription= "This imports CSV files.";
   var $access= "";
 
   /* Array with csv informations*/

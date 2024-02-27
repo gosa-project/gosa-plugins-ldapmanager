@@ -3,8 +3,8 @@
 class ldifexport extends plugin
 {
     /* Definitions */
-    var $plHeadline= "CSV import";
-    var $plDescription= "This does something";
+    var $plHeadline= "LDIF export";
+    var $plDescription= "This exports LDIF files.";
 
     /* attribute list for save action */
     var $attributes= array();

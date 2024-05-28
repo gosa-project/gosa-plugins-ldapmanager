@@ -366,7 +366,7 @@ function dump_ldap($mode = 0)
             $worksheet2->write('A' . $r++, _("User ID") . ": " . $groups[$i][0][0], $title_bold);
             for ($j = 1; $j <= 2; $j++) {
                 $r++;
-                $worksheet2->write('A' . $r, $group_intitul[$j - 1]);
+                $worksheet2->write('A' . $r, $groups_intitul[$j - 1]);
                 for ($k = 0; $k <= $groups[$i][$j]['count']; $k++) {
                     $worksheet2->write('B' . $r, $groups[$i][$j][$k]);
                     $r++;

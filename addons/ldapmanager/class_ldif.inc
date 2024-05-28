@@ -3,27 +3,32 @@
 class ldif extends plugin
 {
     /* Definitions */
-    var $plHeadline= "LDAP tools";
-    var $plDescription= "Export LDIF or Excel snapshots of the LDAP tree";
+    var $plHeadline = "LDAP tools";
+    var $plDescription = "Export LDIF or Excel snapshots of the LDAP tree";
     var $plIcon = "plugins/ldapmanager/images/ldif.png";
     var $matIcon = "account_tree_outlined";
 
     /* attribute list for save action */
-    var $attributes= array();
-    var $objectclasses= array();
+    var $attributes = array();
+    var $objectclasses = array();
     var $ldif;
 
     function __construct(&$config)
     {
         $this->initTime = microtime(TRUE);
 
-        stats::log('plugin', $class = get_class($this), $category = array($this->acl_category),  $action = 'open',
-                $amount = 1, $duration = (microtime(TRUE) - $this->initTime));
+        stats::log(
+            'plugin',
+            $class = get_class($this),
+            $category = array($this->acl_category),
+            $action = 'open',
+            $amount = 1,
+            $duration = (microtime(TRUE) - $this->initTime)
+        );
 
 
         /* Include config object */
-        $this->ldif= new ldiftab($config, $config->data['TABS']['LDIFTAB'], "");
-
+        $this->ldif = new ldiftab($config, $config->data['TABS']['LDIFTAB'], "");
     }
 
     function execute()
@@ -40,22 +45,15 @@ class ldif extends plugin
     static function plInfo()
     {
         return (array(
-                    "plShortName"   => _("LDAP manager"),
-                    "plDescription" => _("LDAP manager")."&nbsp;("._("import")."/"._("export").")",
-                    "plSelfModify"  => FALSE,
-                    "plDepends"     => array(),
-                    "plPriority"    => 1,
-                    "plSection"     => array("addon"),
-                    "plCategory"    => array("ldapmanager" => array("description" => _("LDAP manager"))),
+            "plShortName"   => _("LDAP manager"),
+            "plDescription" => _("LDAP manager") . "&nbsp;(" . _("import") . "/" . _("export") . ")",
+            "plSelfModify"  => FALSE,
+            "plDepends"     => array(),
+            "plPriority"    => 1,
+            "plSection"     => array("addon"),
+            "plCategory"    => array("ldapmanager" => array("description" => _("LDAP manager"))),
 
-                    "plProvidedAcls" => array()
-                    ));
+            "plProvidedAcls" => array()
+        ));
     }
-
-
-
 }
-
-
-// vim:tabstop=2:expandtab:shiftwidth=2:filetype=php:syntax:ruler:
-?>

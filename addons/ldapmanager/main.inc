@@ -21,31 +21,30 @@
 
 /* Remove locks created by this plugin
 */
-if ($remove_lock){
-  if(session::is_set('ldif')){
-    // Nothing to unlock here
-  }
+if ($remove_lock) {
+    if (session::is_set('ldif')) {
+        // Nothing to unlock here
+    }
 }
 
 /* Remove this plugin from session
 */
-if ( $cleanup ){
-  session::un_set('ldif');
-}else{
+if ($cleanup) {
+    session::un_set('ldif');
+} else {
 
-	/* Create phonelist object on demand */
-	if (!session::is_set('ldif')){
-		$ldif= new ldif ($config);
-		$ldif->set_acl_category("ldapmanager");
-		session::set('ldif',$ldif);
-	}
-	$ldif = session::get('ldif');
+    /* Create phonelist object on demand */
+    if (!session::is_set('ldif')) {
+        $ldif = new ldif($config);
+        $ldif->set_acl_category("ldapmanager");
+        session::set('ldif', $ldif);
+    }
+    $ldif = session::get('ldif');
 
-	/* Execute formular */
-	$display= $ldif->execute ();
-	$display.= "<input type=\"hidden\" name=\"ignore\">\n";
+    /* Execute formular */
+    $display = $ldif->execute();
+    $display .= "<input type=\"hidden\" name=\"ignore\">\n";
 
-	/* Store changes  in session */
-	session::set('ldif',$ldif);
+    /* Store changes  in session */
+    session::set('ldif', $ldif);
 }
-?>

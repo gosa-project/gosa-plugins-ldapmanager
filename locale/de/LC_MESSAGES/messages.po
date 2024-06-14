@@ -13,14 +13,14 @@ msgstr ""
 "Project-Id-Version: messages\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-06-14 15:05+0200\n"
-"PO-Revision-Date: 2010-09-16 15:45+0100\n"
-"Last-Translator: Fabian Hickert <Fabian.Hickert@GONICUS.DE>\n"
+"PO-Revision-Date: 2024-06-14 15:08+0200\n"
+"Last-Translator: Mike Gabriel <mike.gabriel@das-netzwerkteam.de>\n"
 "Language-Team: deutsch <de@li.org>\n"
-"Language: \n"
+"Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: KBabel 1.11.4\n"
+"X-Generator: Poedit 3.2.2\n"
 
 #: html/getxls.php:88
 msgid "Birthday"
@@ -436,13 +436,12 @@ msgid "Click here to save the LDAP export to a XLS file"
 msgstr "Hier klicken, um die exportierten Daten in eine xls-Datei zu speichern"
 
 #: addons/ldapmanager/class_exportxls.inc:6
-#, fuzzy
 msgid "XLS export"
 msgstr "CSV-Export"
 
 #: addons/ldapmanager/class_exportxls.inc:7
 msgid "This exports .xls files."
-msgstr ""
+msgstr "Dies exportiert .xls Dateien."
 
 #: addons/ldapmanager/class_exportxls.inc:56
 #: addons/ldapmanager/class_exportxls.inc:111
@@ -479,7 +478,7 @@ msgstr "CSV-Import"
 
 #: addons/ldapmanager/class_csvimport.inc:7
 msgid "This imports CSV files."
-msgstr ""
+msgstr "Dies importiert CSV-Dateien."
 
 #: addons/ldapmanager/class_csvimport.inc:114
 msgid "You've no permission to import CSV files!"
@@ -547,14 +546,12 @@ msgid "Cannot find CSV data in the selected file!"
 msgstr "Kann keine CSV-Daten in der gewählten Datei finden!"
 
 #: addons/ldapmanager/class_import.inc:6
-#, fuzzy
 msgid "LDIF import"
-msgstr "LDIF exportieren"
+msgstr "LDIF importieren"
 
 #: addons/ldapmanager/class_import.inc:7
-#, fuzzy
 msgid "This imports LDIF files."
-msgstr "Importiere LDIF Datei"
+msgstr "Dies importiert LDIF-Dateien."
 
 #: addons/ldapmanager/class_import.inc:57
 msgid "You need full write access to the LDAP tree to import data!"
@@ -580,9 +577,8 @@ msgid "LDIF export"
 msgstr "LDIF exportieren"
 
 #: addons/ldapmanager/class_export.inc:7
-#, fuzzy
 msgid "This exports LDIF files."
-msgstr "Importiere LDIF Datei"
+msgstr "Dies exportiert LDIF-Dateien."
 
 #: addons/ldapmanager/class_export.inc:77
 #, php-format
@@ -592,7 +588,7 @@ msgstr "Kein solches Objekt: %s!"
 #: addons/ldapmanager/class_export.inc:107
 #, php-format
 msgid "Failed to generate LDAP export: %s"
-msgstr ""
+msgstr "LDAP-Export ist fehlgeschlagen: %s"
 
 #: addons/ldapmanager/class_ldif.inc:6
 msgid "LDAP tools"

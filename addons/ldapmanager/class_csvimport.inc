@@ -148,14 +148,8 @@ class csvimport extends plugin
       if(isset($this->csvinfo['sorteddata'])){
         $rowcnt ++;
 
-        /* Set the col count */
-        $tblcolcount= count ($this->csvinfo['cols']);
-
-        /* entrie count */
-        $tbl_entries= count ($this->csvinfo['count']);
-
         /* row count */
-        $tbl_rows   = $tbl_entries / $tblcolcount;
+        $tbl_rows = $this->csvinfo['cols'] / $this->csvinfo['count'];
 
         /* No error occurred */
         $failing = FALSE;

@@ -4,7 +4,7 @@
 <hr>
 
 {if $fileup != TRUE}
-<table summary="{t}CSV export{/t}">
+<table summary="{t}CSV import{/t}">
 	<tr>
 		<td>
 			<LABEL for="userfile">{t}Select CSV file to import{/t}</LABEL>

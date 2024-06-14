@@ -102,7 +102,7 @@
 		
 	</table>
 
-< ! - - {html_table loop=$data cols=$anz table_attr='border="1"'}- - >
+<!-- {html_table loop=$data cols=$anz table_attr='border="1"'} -->
 {/if}
 
 <script>

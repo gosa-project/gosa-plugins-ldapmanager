@@ -96,6 +96,9 @@ class csvimport extends plugin
         $this->csvinfo['arrtempls']   [$tempvar]['name'] = $temp['sn'][0]; 
         $this->csvinfo['arrtempls']   [$tempvar]['dn']   = $temp['dn'];
       }
+
+      // LDAP\Result is not serializable
+      unset ($this->csvinfo['templates']);
     }
 
     $arr_temp  = array_flip($this->csvinfo['attr']);

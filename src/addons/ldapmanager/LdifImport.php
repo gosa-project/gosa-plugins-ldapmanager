@@ -1,6 +1,13 @@
 <?php
 
-class ldifimport extends plugin
+namespace GosaLdapManager\addons\ldapmanager;
+
+use \plugin as Plugin;
+use \stats as stats;
+use \log as log;
+use \msg_dialog as msg_dialog;
+
+class LdifImport extends Plugin
 {
     /* Definitions */
     var $plHeadline = "LDIF export";
@@ -91,7 +98,7 @@ class ldifimport extends plugin
                     while (!feof($handle)) {
                         $str .= fread($handle, 1024);
                     }
-                    @fclose($handle);
+                    fclose($handle);
 
                     // Should we use Overwrite ?
                     if (!empty($_POST['overwrite'])) $overwrite = true;

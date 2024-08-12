@@ -1,6 +1,16 @@
 <?php
 
-class xlsexport extends plugin
+namespace GosaLdapManager\addons\ldapmanager;
+
+use \plugin as Plugin;
+use \stats as stats;
+use \baseSelector as baseSelector;
+use \msg_dialog as msg_dialog;
+use \msgPool as msgPool;
+use \log as log;
+use \LDAP as LDAP;
+
+class XlsExport extends plugin
 {
     /* Definitions */
     var $plHeadline = "XLS import";

@@ -1,6 +1,16 @@
 <?php
 
-class ldifexport extends plugin
+namespace GosaLdapManager\addons\ldapmanager;
+
+use \plugin as Plugin;
+use \stats as stats;
+use \baseSelector as baseSelector;
+use \msg_dialog as msg_dialog;
+use \msgPool as msgPool;
+use \log as log;
+use \LDAP as LDAP;
+
+class LdifExport extends Plugin
 {
     /* Definitions */
     var $plHeadline = "CSV import";

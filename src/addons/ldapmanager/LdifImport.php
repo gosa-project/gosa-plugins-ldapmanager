@@ -134,6 +134,6 @@ class LdifImport extends Plugin
                 }
             }
         }
-        return ($smarty->fetch(get_template_path('contentimport.tpl', TRUE)));
+        return $this->smartyFetch(get_template_path('contentimport.tpl', TRUE), 'ldapManager');
     }
 }

@@ -154,6 +154,6 @@ class XlsExport extends Plugin
         }
 
         $smarty->assign("base", $this->baseSelector->render());
-        return ($smarty->fetch(get_template_path('contentexportxls.tpl', TRUE)));
+        return $this->smartyFetch(get_template_path('contentexportxls.tpl', TRUE), 'ldapManager');
     }
 }

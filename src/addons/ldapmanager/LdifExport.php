@@ -134,6 +134,6 @@ class LdifExport extends Plugin
         }
 
         // Show the main form
-        return ($smarty->fetch(get_template_path('contentexport.tpl', TRUE)));
+        return ($this->smartyFetch(get_template_path('contentexport.tpl', TRUE), 'ldapManager'));
     }
 }

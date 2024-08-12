@@ -50,7 +50,7 @@ class LdifExport extends Plugin
     function execute()
     {
         /* Call parent execute */
-        plugin::execute();
+        parent::execute();
 
         /* Log view */
         if (!$this->view_logged) {

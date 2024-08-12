@@ -10,7 +10,7 @@ use \msgPool as msgPool;
 use \log as log;
 use \LDAP as LDAP;
 
-class XlsExport extends plugin
+class XlsExport extends Plugin
 {
     /* Definitions */
     var $plHeadline = "XLS import";
@@ -52,7 +52,7 @@ class XlsExport extends plugin
     function execute()
     {
         /* Call parent execute */
-        plugin::execute();
+        parent::execute();
 
         /* Log view */
         if (!$this->view_logged) {

@@ -518,6 +518,6 @@ class CsvImport extends Plugin
         }
 
         /* Show main page */
-        return ($smarty->fetch(get_template_path('contentcsv.tpl', TRUE)));
+        return $this->smartyFetch(get_template_path('contentcsv.tpl', TRUE), 'ldapManager');
     }
 }

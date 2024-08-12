@@ -6,6 +6,7 @@ use \plugin as Plugin;
 use \stats as stats;
 use \msg_dialog as msg_dialog;
 use \log as log;
+use \usertabs as usertabs;
 
 class CsvImport extends Plugin
 {

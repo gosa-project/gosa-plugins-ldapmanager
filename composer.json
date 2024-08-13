@@ -1,5 +1,5 @@
 {
-    "name": "gonicus/gosa-plugin-ldapmanager",
+    "name": "gonicus/gosa2-plugin-ldapmanager",
     "description": "GOsa² plugin for plain LDAP",
     "type": "library",
     "license": [
